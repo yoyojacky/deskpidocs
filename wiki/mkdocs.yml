@@ -1,0 +1,12 @@
+site_name: DeskPi Products Wiki
+site_url: https://wiki.deskpi.com
+
+nav:
+        - Home: index.md
+        - DeskPi PicoMate: picomate.md
+        - DeskPi Super6C: super6c.md
+        - DeskPi Lite: deskpilite.md
+        - DeskPi Pro: deskpipro.md
+        - DeskPi Nano: deskpinano.md
+theme: readthedocs
+
