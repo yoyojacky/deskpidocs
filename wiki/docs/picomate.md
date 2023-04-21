@@ -42,6 +42,7 @@ DeskPi PicoMate is an all-in-one and versatile prototyping kit designed for Rasp
 
 ![pinout2](./imgs/picomate/pinoutdiagram2.png)
 
+
 ## Getting Start
 
 ### Getting Started with Python
@@ -98,6 +99,9 @@ This section consists of several example codes. The examples are organized in di
 DeskPi PicoMate has a WS2812 RGB LED pre-wired to `GP22` on the Pico. We can use the `NeoPixel` library to blink the RGB LED.
 
 ![NeoPixel](./imgs/picomate/neopixel.jpg)
+
+#### Breakable Design 
+![picomate-design](./imgs/picomate/DP-0012_Picomate.jpg)
 
 Download the NeoPixel library and copy neopixel.py into the CIRCUITPY/lib folder.This should give you the following folder structure:
 
