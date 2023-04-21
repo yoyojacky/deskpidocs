@@ -1,6 +1,10 @@
 # DeskPi Super6C 
 ![super6c](./imgs/super6c/super6c-main.jpg)
 
+## Purchase 
+![chart](./imgs/picomate/shoppingchart.jpg) 
+[DeskPi Super6C](https://deskpi.com/collections/deskpi-super6c)
+
 ## Description 
 DeskPi Super6C is the Raspberry Pi cluster board a standard size mini-ITX board to be put in a case with up to 6 RPI CM4 Compute Modules.
 - For every CM4:
@@ -214,6 +218,68 @@ The /dev/sdX1 and /dev/sdX2 partitions can now be mounted normally.
 Make sure `J2 (nRPBOOT)` is set to the disabled position and/or nothing is plugged into the USB slave port. Power cycling the board should now result in the Compute Module booting from eMMC.
 ![nRPBOOTJumper](./imgs/super6c/jumberj2.png)
 
+## Compute Module 4 Bootloader
+The default bootloader configuration on CM4 is designed to support bring up and development on a Compute Module 4 IO board and the software version flashed at manufacture may be older than the latest release. For final products please consider:
+
+* Selecting and verifying a specific bootloader release. The version in the usbboot repo is always a recent stable release.
+
+* Configuring the boot device (e.g. network boot). See BOOT_ORDER section in the bootloader configuration guide.
+
+* Enabling hardware write protection on the bootloader EEPROM to ensure that the bootloader can’t be modified on remote/inaccessible products.
+
+N.B. The Compute Module 4 ROM never runs recovery.bin from SD/EMMC and the rpi-eeprom-update service is not enabled by default. This is necessary because the EMMC is not removable and an invalid recovery.bin file would prevent the system from booting. This can be overridden and used with self-update mode where the bootloader can be updated from USB MSD or Network boot. However, self-update mode is not an atomic update and therefore not safe in the event of a power failure whilst the EEPROM was being updated.
+
+## Modifying the bootloader configuration
+To modify the CM4 bootloader configuration:
+```bash
+cd usbboot/recovery
+```
+
+Replace pieeprom.original.bin if a specific bootloader release is required.
+
+Edit the default boot.conf bootloader configuration file. Typically, at least the BOOT_ORDER must be updated: 
+
+* For network boot `BOOT_ORDER=0xf2`
+
+* For SD/EMMC boot `BOOT_ORDER=0xf1`
+
+* For USB boot failing over to EMMC `BOOT_ORDER=0xf15`
+
+Run `./update-pieeprom.sh` to update the EEPROM image `pieeprom.bin` image file.
+
+If EEPROM write protection is required then edit config.txt and add `eeprom_write_protect=1`. Hardware write-protection must be enabled via software and then locked by pulling the EEPROM_nWP pin low.
+
+Run `../rpiboot -d`. to update the bootloader using the updated EEPROM image pieeprom.bin
+
+The pieeprom.bin file is now ready to be flashed to the Compute Module 4.
+
+## Flashing the bootloader EEPROM - Compute Module 4
+To flash the bootloader EEPROM follow the same hardware setup as for flashing the EMMC but also ensure `EEPROM_nWP` is NOT pulled low. Once complete EEPROM_nWP may be pulled low again.
+ 
+```bash
+# Writes recovery/pieeprom bin to the bootloader EEPROM.
+./rpiboot -d recovery
+```
+
+## Troubleshooting
+For a small percentage of Raspberry Pi Compute Module 3s, booting problems have been reported. We have traced these back to the method used to create the FAT32 partition; we believe the problem is due to a difference in timing between the BCM2835/6/7 and the newer eMMC devices. The following method of creating the partition is a reliable solution in our hands.
+
+```bash
+sudo parted /dev/<device>
+(parted) mkpart primary fat32 4MiB 64MiB
+(parted) q
+sudo mkfs.vfat -F32 /dev/<device>
+sudo cp -r <files>/* <mountpoint>
+```
+
+After Flash Raspberry Pi OS to eMMC on CM4 module, just power off the system, and one complete, 5 to go, just repeat those step five times. 
+
+If your CM4 Module does not have eMMC on board, that will be easy, just flash Raspberry Pi OS to TF card or SSD drive, and insert them to card slot, fix it with screws. and connect the power supply, and press `PWR_BTN` button to power them on.
+
+If your CM4 module has eMMC on board, the SSD drive and TF card can be external mass storage.
+
+![storage](./imgs/super6c/cm4install2.jpg)
+
 ## How to build your own cluster and manage the cluster via Ansible
 ### Fit for CM4 Lite version
 ***Note:***
@@ -267,19 +333,103 @@ default password: raspberry
 ```
 * Make sure your OS can access internet.
 
-* Install ansible via following command:
+* Deploy ansible environments as following steps
+
+If you want to use Ansible to manage Raspberry Pi cluster, you need to upgrade python version from 3.7 to 3.8 as following steps:
+
+1. Remove old version python 
 
 ```bash
+sudo apt remove ansible 
+sudo apt purge –y python2.7-minimal
+```
+
+2. Update and upgrade system.
+
+```bash
+sudo apt update 
+sudo apt upgrade –y
+```
+
+3. Install dependencies. 
+
+```bash
+sudo apt-get install -y build-essential tk-dev libncurses5-dev \
+libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev \
+libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev
+```
+
+4. Download source code and compile it.
+
+```bash
+version=3.8.5
+wget https://www.python.org/ftp/python/$version/Python-$version.tgz
+
+tar zxf Python-$version.tgz
+cd Python-$version
+./configure --enable-optimizations
+make -j4
+sudo make altinstall
+```
+
+> Do remember:　Installs Python into /usr/local/bin
+
+5. Install ansible 
+
+We can use apt or your particular distro package manager, but doing that, we risk no getting the latest version available.
+In some cases, I have to agree that is good idea, we make sure system is kept stable and the packages has been tested enough, but in technologies like Ansible, which is still changing so rapidly, I recommend you to go ahead in your tests and get the latest version, that way you will also learn to use those latest versions, which have some modules usage differences.
+Lets see the version installed using apt in Raspbian.
+
+```bash
+sudo apt list ansible
 pip3 install ansible --user
 ```
 
-* Configure environment of PATH by editing 
+Installing Ansible using the --user option, will make that the binary will be available directly under your user home, and not in your root bin directory (/bin,/usr/bin..)
 
+![pathvar](./imgs/super6c/pathenv.png)
+ 
+For that, I recommend you to add your `$user_home/.local/bin` to your PATH environment:
+
+![env](./imgs/super6c/env.png)
+ 
+### Ansible Project Configuration
+Now that we have Ansible installed, let’s set some basic configuration.
+
+Create a directory for our first project where we are going to set the different configuration files and Ansible playbooks
 ```bash
-sudo nano /home/pi/.bashrc
+mkdir Ansible
 ```
 
-* Create your own app to manage the whole cluster.
+First file we are going to create, is an Ansible configuration file. This will make sure we are using correct inventory file and some specific options for this project.
+
+In this case, we will use the inventory file in the local directory and will be connecting to the remote server as root. Additionally, will disable ssh-key check so we can connect to the servers without doing first ssh-key handshake (is a security risk, but will help us to destroy and deploy containers and VMs more rapidly in the future)
+
+![sshkey](./imgs/super6c/sshkey.png)
+
+ 
+Using --version attribute, will allow us to make sure we are suing correct configuration file:
+
+![version](./imgs/super6c/version.png)
+ 
+Create the inventory file with the list of hosts 
+
+![host](./imgs/super6c/host.png)
+ 
+We can list all the hosts from our inventory：
+
+![inventory](./imgs/super6c/inventory.png)
+
+ 
+If we try the command ansible ping we will have errors, since we can not actually connect to our servers using SSH public keys.
+```bash
+ansible all –m ping
+```
+![ansibleping](./imgs/super6c/ansibleping.png)
+
+and before that, we need to create a file called ping.yml. 
+
+![yaml](./imgs/super6c/yaml.png)
 
 ##FAQ
 * Q: What can I do with Super6C ?
