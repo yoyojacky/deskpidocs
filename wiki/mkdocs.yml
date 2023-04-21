@@ -6,8 +6,16 @@ nav:
         - DeskPi PicoMate: picomate.md
         - DeskPi Super6C: super6c.md
         - DeskPi Lite: deskpilite.md
-        - DeskPi Pro: deskpipro.md
         - DeskPi Nano: deskpinano.md
+        - DeskPi Pro: deskpipro.md
+        - FAQ: faq.md
+        - How to check OS version: osversion.md
+        - How to check wifi connection: ipcheck.md
+        - How to check SSD/HDD status: ssdcheck.md
+        - How to check front USB port: frontUSB.md
+        - How to check HDMI configuration: hdmicheck.md
+        - How to check IR remote: ircheck.md
+        - How to check Audio Output: audiocheck.md
 theme: readthedocs
 markdown_extensions:
   - pymdownx.highlight:

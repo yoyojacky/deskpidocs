@@ -4,7 +4,7 @@ The DeskPi V1 Case is a case made of ABS, and an adapter board is provided insid
 and offer `microHDMI` to `Full-sized HDMI` interface, makes it convenient for users to use standard HDMI cables to connect external display devices. 
 In addition, it provides an ultra-thin aluminum alloy heat sink and supports an adjustable-speed ultra-thin silent fan, which can be safely cut off Power supply for Raspberry Pi  by sending a "power_off" signal to the adapter board.
 
-![DeskPi Lite](./imgs/deskpilite/Deskpi-lite_01.jpg)
+![DeskPi Lite](./imgs/deskpilite/Deskpi-lite_07.jpg)
 
 ## Purchase 
 ![chart](./imgs/picomate/shoppingchart.jpg)
