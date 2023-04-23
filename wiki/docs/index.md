@@ -11,7 +11,9 @@ Here you can provide product descriptions, product features, product documents, 
 
   - DeskPi Nano [DP-0002](https://deskpi.com/collections/deskpi-nano) ![DeskPi Nano](./imgs/deskpinano/DP-0002-2.jpg)
 
-  - DeskPi Lite [DP-0009](https://deskpi.com/collections/deskpi-lite) ![DeskPi Lite](./imgs/deskpilite/Deskpi-lite_07.jpg)
+  - DeskPi Lite [DP-0009](https://deskpi.com/collections/deskpi-lite) ![DeskPi Lite](./imgs/deskpilite/DeskPi-Lite_main.jpg)
+
+  - DeskPi Super6C [DP-0008](https://deskpi.com/collections/deskpi-super6c) ![DeskPi Super6C](./imgs/super6c/super6c-main.jpg)
 
 ### PicoMate Series
   - PicoMate [DP-0012](https://deskpi.com/collections/deskpi-picomate/products/new-deskpi-picomate-v1-0-for-raspberry-pi-pico-pico-w):  

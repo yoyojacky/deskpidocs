@@ -3,6 +3,8 @@
 The DeskPi Pro is a hardware kit for converting a standard Raspberry Pi 4 from a naked SBC, with limited storage, into a mini PC complete with a power button, cooling, better ports and, via SATA then USB3, 2.5" or M.2 SATA SSD storage.
 
 <pre>Note: Support M.2 SATA SSD only, Does not support M.2 NVME SSD </pre>
+## Purchase
+![shoppingchart](./imgs/picomate/shoppingchart.jpg) [DeskPi Pro](https://deskpi.com/collections/frontpage)
 
 ## Currently tested operating systems that can support Deskpi scripts
 * Raspberry Pi OS(32bit) - tested 
