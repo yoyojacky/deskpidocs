@@ -4,6 +4,7 @@ deskpi products docs
 1. Install mkdocs library by execute:
 ```bash
 sudo apt -y install mkdocs
+pip install pymdown-extensions --force 
 ```
 2. Clone the repository to local machine.
 ```bash
@@ -17,6 +18,7 @@ mkdocs serve -a 0.0.0.0:80
 ```
 4. Build static web documents
 ```bash
+mkdocs build --clean
 mkdocs build 
 ```
 
