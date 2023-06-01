@@ -64,9 +64,9 @@ The 40Pin GPIO lead out and reserved RTC clock battery interface.
 	- Antenna Element Cable: 1.13 Coaxial cable, with plastic coating.
 	- Impedance: 5Ohm.
 	- Gain: About 3 dBi.
-等图片
+![IPEX1 Antenna](./imgs/deskpiminicube/DP-0019-11.jpg)
 ## RTC Battery Information 
-* RTC Battery `dose not` include in the package, additional purchase required! 
+ear RTC Battery `dose not` include in the package, additional purchase required! 
 * Fit for: laptop CMOS Battery, Recommended `CR1220 3V` with `ZH1.25` Connector.
 
 ## Package Includes
@@ -85,9 +85,6 @@ and press the Raspberry Pi CM4 module according to following figure, please be w
 Please refer to following figure to assemble it.
 
 ![DeskPi mini cube feature4](./imgs/deskpiminicube/DP-0019-6.jpg)
-
-## Install IPX antenna 
-等图片
 
 ### [Optional] Install M.2 NVME SSD M-KEY 2242/2240. 
 
@@ -110,13 +107,13 @@ Please refer to following figure to assemble it.
 Shutdown system in terminal or desktop, and then long press the button to cut off power.
 
 ## DIP Switch Functionality
-等图片
+![DIP Switch Details](./imgs/deskpiminicube/DP-0019-9.jpg)
 ### DIP Switch Pinout 
-
 * 1 - USB OTG Pull UP
 * 2 - UNATTENDEND 
 * 3 - EEPROM_nWP  (EEPROM write protection)
 * 4.- nRPIBOOT  (disable or enable eMMC Boot)
+![DIP Switch](./imgs/deskpiminicube/DP-0019-12.jpg)
 
 If you are using Raspberry Pi CM4 with EMMC onboard. please refer to this URL:
 [How to flash the Compute Module](https://www.raspberrypi.com/documentation/computers/compute-module.html#compute-module-4) in section `“Flashing the Compute Module eMMC”` 
