@@ -15,7 +15,7 @@ Overall, the M.2 SATA SSD driver expansion board for DeskPi Lite enhances the st
 
 ## Purchase 
 ![chart](./imgs/picomate/shoppingchart.jpg)
-[DeskPi Lite M.2 SATA SSD Expansion Kit](https://www.amazon.de/dp/B0C6SSHS65?ref=myi_title_dp)
+[DeskPi Lite M.2 SATA SSD Expansion Kit](https://deskpi.com/collections/deskpi-lite/products/deskpi-lite-m-2-sata-expansion-board-for-raspberry-pi-4-only-compatible-with-deskpi-lite-case)
 
 ## Features
 * **Storage Expansion:** The expansion board allows you to add extra storage to your DeskPi Lite system, enabling you to store more files, applications, and media.  

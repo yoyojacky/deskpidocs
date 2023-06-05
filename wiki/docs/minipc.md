@@ -10,7 +10,7 @@
 ## Purchase 
 ![chart](./imgs/picomate/shoppingchart.jpg)
 
-[DeskPi Mini Cube](https://deskpi.com/collections/deskpi-minicube)
+[DeskPi Mini Cube](https://deskpi.com/products/deskpi-mini-cube-for-raspberry-pi-compute-module-4-cm4?_pos=1&_psq=DeskPi%20Cube&_ss=e&_v=1.0)
 
 ## Description 
 DeskPi Mini Cube for Raspberry Pi CM4 is a case with a miniature appearance and extremely portable features.
@@ -65,6 +65,10 @@ The 40Pin GPIO lead out and reserved RTC clock battery interface.
 	- Impedance: 5Ohm.
 	- Gain: About 3 dBi.
 ![IPEX1 Antenna](./imgs/deskpiminicube/DP-0019-11.jpg)
+### Install IPEX Antenna 
+Add the antenna as following figure, and then remove the protection film on back of the antenna, and then paste it inside the case. 
+![Install Antenna](./imgs/deskpiminicube/DP-0019-13.jpg)
+
 ## RTC Battery Information 
 ear RTC Battery `dose not` include in the package, additional purchase required! 
 * Fit for: laptop CMOS Battery, Recommended `CR1220 3V` with `ZH1.25` Connector.
