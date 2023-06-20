@@ -5,6 +5,7 @@ nav:
         - Home: index.md
         - DeskPi Lite NAS Case: deskpi_lite_nas_case.md
         - DeskPi Lite Expansion Kit: expansionkit.md
+        - DeskPi Lite For Raspberry Pi 3B/3B+ : deskpi_lite_for_3b.md
         - DeskPi Mini PC: minipc.md
         - DeskPi PicoMate: picomate.md
         - DeskPi Super6C: super6c.md

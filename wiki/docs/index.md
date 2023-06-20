@@ -7,6 +7,8 @@ Here you can provide product descriptions, product features, product documents, 
 
 ## Product List
 ### DeskPi Series
+  - DeskPi Lite Nas Case [DP-0020](https://deskpi.com/products/)![DeskPi lite Nas case](./imgs/nascase/DP-0020-2.jpg) 
+
   - DeskPi Mini PC [DP-0019](https://deskpi.com/products/deskpi-mini-cube-for-raspberry-pi-compute-module-4-cm4?_pos=1&_psq=DeskPi%20Cube&_ss=e&_v=1.0) ![DeskPi Mini PC](./imgs/deskpiminicube/DP-0019-1.jpg)
 
   - DeskPi Lite Expansion Kit [DP-0018](https://deskpi.com/collections/deskpi-lite/products/deskpi-lite-m-2-sata-expansion-board-for-raspberry-pi-4-only-compatible-with-deskpi-lite-case) ![DeskPi Lite Expansion Kit](./imgs/expansionkit/1.jpg)
