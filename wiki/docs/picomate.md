@@ -646,6 +646,11 @@ On Serial Console, you will see the temperature and humidity printed every `2s`.
 
 ![THS test](./imgs/picomate/DHT12_test.jpg)
 
+## Libraries download
+
+* Firmware Download: [firmware](./attachments/adafruit-circuitpython-raspberry_pi_pico-en_US-7.3.3.uf2)
+* libraries Download: [libraries](./attachments/libraries.zip)
+
 ## FAQ
 * Q: Should I download the libraries from internet?
   A: Yes, if you want to use the latest version of the libraries.
