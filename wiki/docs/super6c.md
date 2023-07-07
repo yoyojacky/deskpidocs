@@ -60,6 +60,11 @@ OUTPUT：19.0V ≈ 4.73A， 89.87W
 
 ![powersupplyport](./imgs/super6c/powersupply.png)
 
+* NOTE: `Please pay attention` to the order of starting up, if the order is wrong, you may see sparks at the DC port, so pay special attention here! ! !
+
+1. Insert the DC head of the power adapter into the DC interface of the Super6C motherboard.
+
+2. Then insert the plug of the power supply into the wall socket or Power cord
 
 ## Mechanical Drawing
 ![Mechanical](./imgs/super6c/machinical.png)
