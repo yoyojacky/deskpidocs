@@ -3,6 +3,7 @@ site_url: https://wiki.deskpi.com
 
 nav:
         - Home: index.md
+        - DeskPi MicroCar: microcar.md
         - DeskPi Lite NAS Case: deskpi_lite_nas_case.md
         - DeskPi Lite Expansion Kit: expansionkit.md
         - DeskPi Lite For Raspberry Pi 3B/3B+ : deskpi_lite_for_3b.md
@@ -22,4 +23,18 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - attr_list 
-
+  - md_in_html
+plugins:
+   - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       slide_effect: slide
+       width: 100%
+       height: auto
+       zoomable: true
+       draggable: true
+       skip_classes:
+         - custom-skip-class-name
+       auto_caption: false
+       caption_position: bottom
