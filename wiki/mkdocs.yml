@@ -3,6 +3,7 @@ site_url: https://wiki.deskpi.com
 
 nav:
         - Home: index.md
+        - DeskPi RackMate T1: rackmate.md
         - DeskPi MicroCar: microcar.md
         - DeskPi Lite NAS Case: deskpi_lite_nas_case.md
         - DeskPi Lite Expansion Kit: expansionkit.md

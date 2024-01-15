@@ -109,6 +109,7 @@ Download the NeoPixel library and copy neopixel.py into the CIRCUITPY/lib folder
 
 Copy and paste the following code to the Mu Editor and press `Save`:
 
+
 ```python
 import time
 import board
@@ -124,7 +125,7 @@ pixels = neopixel.NeoPixel(board.GP22, 1)
 
 while True:
     for color in COLORS:
-        pixels[0] = COLORS
+        pixels[0] = color
         time.sleep(1)
 ```
 
@@ -134,6 +135,7 @@ Your code will run as soon as the file is done saving. Observe that the RGB LED 
 DeskPi PicoMate has a Push Button pre-wired to `GP26` on the Pico. The example prints a message to the console each time the state of the button changes. When the button is pressed, the input level of `GP26` will be `low` (False) level.
 ![button](./imgs/picomate/button.jpg)
 Copy and paste the following code to the Mu Editor and press `Save`:
+<br>
 
 ```python 
 import board
@@ -155,6 +157,15 @@ while True:
 
 ```
 
+
+
+
+
+
+
+
+
+
 Press the button and observe the Serial Console, you will see the message printed each time the state of the button changes:
 
 ![button_test](./imgs/picomate/button_test.jpg)
@@ -173,7 +184,9 @@ The table below shows the connections of each pin of the rotary encoder:
 
 Copy and paste the following code to the Mu Editor and press `Save`:
 
+
 ```python 
+
 import rotaryio 
 import board 
 import digitalio
@@ -217,12 +230,16 @@ DeskPi PicoMate has a buzzer pre-wired to `GP27` on the Pico. To control the buz
 
 Copy and paste the following code to the Mu Editor and press Save:
 
+
 ```python 
+
 import time
 import board 
 import pwmio
 
-# Define a list of tones/music notes to play. TONE_FREQ = [
+# Define a list of tones/music notes to play. 
+
+TONE_FREQ = [
 	1047,	1047,	1568,	1568,	1760,	1760,	1568,	0,
 	1397,	1397,	1319,	1319,	1175,	1175,	1047,	0,
 	1568,	1568,	1397,	1397,	1319,	1319,	1175,	0,
@@ -240,10 +257,11 @@ buzzer.duty_cycle = 32768
 while True:
     for note in TONE_FREQ:
         if note:
-            buzzer.frequency = notes
+            buzzer.frequency = note
         time.sleep(0.1)
 
 ```
+
 The music playback will immediately start as soon as the code is done saving. 
 
 ### 0.96” 128x64 OLED Display
@@ -258,6 +276,7 @@ The table below shows the connections of each pin of the OLED:
 |SDA| GP16/I2C0_SDA|
 
 Before we can use the display module, we need the following modules installed:
+
 - adafruit_register 
 - adafruit_framebuf  
 - adafruit_ssd1306 
@@ -268,8 +287,10 @@ Copy the libraries into the CIRCUITPY/lib folder. This should give you the follo
 ![OLEDFile_str2](./imgs/picomate/oled_file_str2.png)
 
 Then, copy and paste the following code to the Mu Editor and press `Save`:
+<br>
 
 ```python 
+
 import time
 import board 
 import busio
@@ -278,6 +299,7 @@ from adafruit_ssd1306 import SSD1306_I2C
 i2c0 = busio.I2C(scl = board.GP17, sda = board.GP16) 
 
 # 0.96" 128x64 OLED Display
+
 display = SSD1306_I2C(128, 64, i2c0)
 
 def display_text(str, line):
@@ -287,13 +309,16 @@ def display_text(str, line):
 while True:
     display.fill(0)
 
-    display_text("Hello, World!", 0) display_text("It's DeskPi PicoMate!", 2)
+    display_text("Hello, World!", 0) 
+
+	display_text("It's DeskPi PicoMate!", 2)
 
     display.show()
 
     time.sleep(0.5)
 
 ```
+
 Try to change the display text and observe what is printed on the OLED.
 
 ### PDM Microphone
@@ -312,8 +337,10 @@ The PDM microphone is pre-wired to the Pico. The table below shows the connectio
 As PDMIn is built into CircuitPython, no separate libraries are necessary for this example! 
 
 Copy and paste the following code to the Mu Editor and press `Save`:
+<br>
 
 ```python  
+
 import time 
 import array 
 import math 
@@ -347,19 +374,23 @@ while True:
     time.sleep(0.1)
 
 ```
+
 On Serial Console, you will see the Normalized RMS value of the audio captured by the Microphone. Try to make some sound. You will see the magnitude changes. You can also use the plotter for data inspection. Press the `Plotter` button on the top menu.
 ![PDM_MIC_TEST](./imgs/picomate/PDM_mic_test.jpg)
 
 ### Digital PIR Sensor
-DeskPi PicoMate has a Digital PIR sensor pre-wired to `GP28` on the Pico. The Digital PIR sensor allows you to sense motion, almost used to detect whether a human has moved in or out of the sensors range.
+DeskPi PicoMate has a Digital PIR sensor pre-wired to `GP28` on the Pico. 
+The Digital PIR sensor allows you to sense motion, almost used to detect whether a human has moved in or out of the sensors range.
 
 ![PIR_Sensor](./imgs/picomate/pirsensor.jpg)
 
 The Digital PIR sensor acts as a digital output. When the sensor is triggered, the input level of `GP28` will be `High` (True) Level.
 
 Copy and paste the following code to the Mu Editor and press `Save`:
+<br>
 
 ```python 
+
 import board
 import digitalio
 
@@ -380,6 +411,7 @@ while True:
         print('Motion ' + ('detected!' if pir_sensor.value else 'removed!'))
 
 ```
+
 Try moving your body and see messages printed on the Serial Console.
 
 ![PIR_Sensor_test](./imgs/picomate/pirsensor_test.jpg)
@@ -396,12 +428,15 @@ The table below shows the connections of each pin of the sensor:
 |SDA| GP14/I2C1_SDA |
 
 Before we can use the sensor, we need the following modules installed:
+
 - adafruit_register
 - adafruit_lsm6ds
 
 Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:
 
+
 ```bash 
+
 CIRCUITPY/
 ├── boot_out.txt
 ├── code.py
@@ -423,9 +458,12 @@ CIRCUITPY/
     ├── i2c_struct.py
     └── i2c_struct_array.py
 ```
+
 Then, copy and paste the following code to the Mu Editor and press `Save`:
+<br>
 
 ```python 
+
 import time 
 import board 
 import busio
@@ -449,9 +487,11 @@ while True:
 #     time.sleep(0.1)
 
 ``` 
+
 Press the `Plotter` button on the top menu, and try moving your board and see the changes in plotter.
 
 ![IMUSensor_test](./imgs/picomate/imu_test.jpg)
+
 
 ### 3-Axis Magnetometer
 
@@ -466,10 +506,12 @@ The table below shows the connections of each pin of the sensor:
 |SDA|GP14/I2C1_SDA|
 
 Before we can use the sensor, we need the following modules installed:
+
 - adafruit_register
 - adafruit_mmc56x3
 
 Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:
+
 ```bash
 
 CIRCUITPY/
@@ -487,8 +529,10 @@ CIRCUITPY/
         └── i2c_struct_array.py
 ```
 Then, copy and paste the following code to the Mu Editor and press `Save`:
+<br>
 
 ```python  
+
 import time 
 import board 
 import busio
@@ -511,6 +555,7 @@ while True:
     time.sleep(0.1)
 
 ```
+
 Press the `Plotter` button on the top menu, and try moving your board and see the changes in plotter.
 ![3-Axis Magnetometer test](./imgs/picomate/3xmagnet_test.jpg)
 
@@ -530,11 +575,14 @@ The table below shows the connections of each pin of the sensor:
 |SDA|GP14/I2C1_SDA|
 
 Before we can use the sensor, we need the following modules installed:
+
 - adafruit_register
 - ltr381rgb
 
 Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:
+
 ```bash
+
 CIRCUITPY/
 ├── boot_out.txt
 ├── code.py
@@ -551,8 +599,10 @@ CIRCUITPY/
 
 ```
 Then, copy and paste the following code to the Mu Editor and press `Save`:
+<br>
 
 ```python 
+
 import time 
 import board 
 import busio
@@ -573,7 +623,11 @@ while True:
     time.sleep(0.5)
 
 ```
-On Serial Console, you will see the calculated lux of ambient light. Try to lit up or dim the sensor. You will see the value changes. You can also use the plotter for raw data inspection. Press the Plotter button on the top menu.
+
+On Serial Console, you will see the calculated lux of ambient light. 
+Try to lit up or dim the sensor. You will see the value changes. 
+You can also use the plotter for raw data inspection.
+Press the Plotter button on the top menu.
 
 ![Digital Optical Sensor test](./imgs/picomate/DoSensor_test.jpg)
 
@@ -595,7 +649,9 @@ Before we can use the sensor, we need the following modules installed:
 - adafruit_sht31d
 
 Copy the libraries into the CIRCUITPY/lib folder. This should give you the following folder structure:
+
 ```bash
+
 CIRCUITPY/
 ├── boot_out.txt
 ├── code.py
@@ -611,8 +667,10 @@ CIRCUITPY/
 └── adafruit_sht31d.py
 ```
 Then, copy and paste the following code to the Mu Editor and press `Save`:
+<br>
 
 ```python  
+
 import time 
 import board 
 import busio
@@ -642,6 +700,7 @@ while True:
         print("Sensor Heater status =", sht_sensor.heater)
 
 ```
+
 On Serial Console, you will see the temperature and humidity printed every `2s`.
 
 ![THS test](./imgs/picomate/DHT12_test.jpg)
