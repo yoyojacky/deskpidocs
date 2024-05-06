@@ -8,7 +8,7 @@ ensuring that you can correctly install, use, and maintain this product.
 ![10-inch width](./imgs/rackmateT1/DP-0022-W-02.png)
 
 ![shoppingChart](./imgs/picomate/shoppingchart.jpg)
-[Buy DeskPi RackMate T1](https://deskpi.com/collections/RackmateT1)
+[Buy DeskPi RackMate T1](https://deskpi.com/products/deskpi-rackmate-t1-2)
 
 [Visit DeskPi Official Website](https://deskpi.com/){ .md-button .md-button --primary }
 
