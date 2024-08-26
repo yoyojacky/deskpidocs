@@ -19,6 +19,51 @@ DeskPi Super6C is the Raspberry Pi cluster board a standard size mini-ITX board 
   * HDMI 2.0 x1
   * HDMI 1.4a x1
 
+## Compatibility 
+
+Currently, after testing, Super6C is not only able to support the Raspberry Pi CM4 module but can also boot some CM4 modules from other brands. However, it is limited to just booting, and many core functions of Super6C are still unusable. This is likely due to the pin distribution and functionality of the board-to-board connector being different from that of the Raspberry Pi. It is recommended to continue using the Raspberry Pi CM4 module in conjunction with Super6C.
+
+* Testing Result on BPi-CM4 V1.0
+
+| BananaPi CM4 (BPi-CM4 V1.0) | Super6C functons | Compatibility |
+|:---:|:---:|:---:| 
+| - | USB Port 1 | <font color=green> YES </font> | 
+| - | USB Port 2 | <font color=green> YES </font> | 
+| - | HDMI1 | <font color=green> YES </font> | 
+|- | HDMI2 | <font color=red> NO </font> | 
+|- | ETH1 | <font color=red> NO </font> | 
+|- | ETH2 | <font color=red> NO </font> | 
+|- | Front USB Ports | <font color=red> NO </font> | 
+|- | M.2 NVMe SSD | <font color=red> NO </font> | 
+
+* Testing Result on Orange Pi OPi-CM4 V1.4
+
+| OrangePi CM4 (OPi-CM4 V1.4) | Super6C functons | Compatibility |
+|:---:|:---:|:---:| 
+|- | USB Port 1 | <font color=red> NO </font> | 
+|- | USB Port 2 | <font color=red> NO </font> | 
+|- | HDMI1 | <font color=green> YES </font> | 
+|- | HDMI2 | <font color=red> NO </font> | 
+|- | ETH1 | <font color=red> NO </font> | 
+|- | ETH2 | <font color=red> NO </font> | 
+|- | Front USB Ports | <font color=red> NO </font> | 
+|- | M.2 NVMe SSD | <font color=red> NO </font> | 
+
+* Testing Result on Orange Pi OPi-CM5 V1.1
+
+> Can not booting from Orange Pi OPi-CM5 V1.1 computer module. 
+
+| OrangePi CM5 (OPi-CM5 V1.1) | Super6C functons | Compatibility |
+|:---:|:---:|:---:| 
+|- | USB Port 1 | <font color=red> NO </font> | 
+|- | USB Port 2 | <font color=red> NO </font> | 
+|- | HDMI1 | <font color=red> NO </font> | 
+|- | HDMI2 | <font color=red> NO </font> | 
+|- | ETH1 | <font color=red> NO </font> | 
+|- | ETH2 | <font color=red> NO </font> | 
+|- | Front USB Ports | <font color=red> NO </font> | 
+|- | M.2 NVMe SSD | <font color=red> NO </font> | 
+
 ## Featrues
 
 ## Package Includes:
