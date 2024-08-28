@@ -46,23 +46,37 @@ decoration.
 * Expandability
 Both sides are made of translucent acrylic, providing dust resistance and reduced weight. 
 This design allows direct observation of the cabinet's interior, and users can add ambient lights for decoration.
+
 ![Expandability](./imgs/rackmateT1/update/DP-0022-09.png)
 
 ## Package Includes 
+
 ![PackageIncludes](./imgs/rackmateT1/update/DP-0022-10.png)
 
 ## Optional accessories
-![Optional accessories](./imgs/rackmateT1/update/DP-0022-11.png)
-![Optional accessories2](./imgs/rackmateT1/update/DP-0022-12.png)
+<font color=red> Following accessories are not included in the package,
+    additional purchase required. </font></br> 
+
+![Optional accessories3](./imgs/rackmateT1/deskpi_rackmate_t1_accessories.jpg) 
+
+* Please search the accessories in <font color=red>[https://deskpi.com/](https://deskpi.com) </font></br> or click the links below. 
+
 ### Accessories Purchase URL
+
 ![shoppingChart](./imgs/picomate/shoppingchart.jpg){: style="height:50px;width:50px"}
 ![thumbsup](./imgs/rackmateT1/update/thumbsup.png){: style="height:50px;width:50px"}
 
-* Rack Shell [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
-* Blank Pannel [DP-0032](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-blank-pannel)
-* SBC Shell [DP-0033](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-sbc-shell)
-* 10-Inch Network Switch [DP-0034](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-10-inch-network-switch)
-* Mini ITX Shell [DP-0035](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-mini-itx-shell)
+* Rack Shell:  [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
+* Blank Pannel; [DP-0032](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-blank-pannel)
+* SBC Shell:  [DP-0033](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-sbc-shell)
+* 10-Inch Network Switch: [DP-0034](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-10-inch-network-switch)
+* Mini ITX Shell: [DP-0035](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-mini-itx-shell)
+* CAT6A Ethernet Cable(0.2M): [L-0094](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-2m-snagless-short-shielded-cat6a-ethernet-cable) 
+* CAT6A Ethernet Cable(0.5M): [L-0095](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-5m-snagless-short-shielded-cat6a-ethernet-cable) 
+* DC PDU Lite 7-CH 0.5U Switch: [DP-0042](./rackmate_accessories.md) 
+
+<font color=red>Get ready for the upcoming release of the DC PDU Lite 7-CH 0.5U Switch DP-0042 on September 1st. Stay tuned for more details!</font>
+
 
 ## Multiple Usages accroding to your requrement
 ![Usages](./imgs/rackmateT1/update/DP-0022-13.png)
@@ -72,6 +86,9 @@ This design allows direct observation of the cabinet's interior, and users can a
 
 ## Assembling Steps
 ![Assembling Steps](./imgs/rackmateT1/update/DP-0022-15.png)
+
+## YouTube Videos
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mwcAfQ94cXg?si=L08mH2LI2iv1c-lC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## DeskPi 
 ![DeskPi announcement](./imgs/rackmateT1/update/DP-0022-16.png)
