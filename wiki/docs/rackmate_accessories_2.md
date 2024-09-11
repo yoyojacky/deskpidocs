@@ -104,15 +104,15 @@ The 10-inch Server Rack 0.5U Rack Cable Management Panel with 3 D-Rings is a cab
 [US Store]( https://www.amazon.com/dp/B0D5XKZ714/)
 <br> 
 [UK Store]( https://www.amazon.co.uk/dp/B0D5QP91R9)
-)
+
 * SBC Shell 10 inch 1U Rack, with 2PCS Micro HDMI to HDMI Adapter Board for Raspberry Pi 5 / Pi 4B
-)
+
 [US Store]( https://www.amazon.com/dp/B0D9NGC4DH/)
 <br> 
 [UK Store]( https://www.amazon.co.uk/dp/B0D9NGC4DH)
-)
+
 * Micro HDMI to HDMI Adapter Board for Raspberry Pi 5 / Pi 4B
-)
+
 [US Store]( https://www.amazon.com/dp/B0D9LDQ7DY/)
 <br> 
 [UK Store]( https://www.amazon.co.uk/dp/B0D9LDQ7DY)
@@ -123,7 +123,7 @@ The 10-inch Server Rack 0.5U Rack Cable Management Panel with 3 D-Rings is a cab
 <br> 
 [UK Store (0.2m)](https://www.amazon.co.uk/dp/B0DDX78486)
 <br> 
-[UK Store (0.5m)] (https(//www.amazon.co.uk/dp/B0DDXQH81J)
+[UK Store (0.5m)](https://www.amazon.co.uk/dp/B0DDXQH81J)
 
 * Rack Shell 10 Inch 0.5U Rack Shelf
 

@@ -75,7 +75,8 @@ This design allows direct observation of the cabinet's interior, and users can a
 * CAT6A Ethernet Cable(0.5M): [L-0095](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-5m-snagless-short-shielded-cat6a-ethernet-cable) 
 * DC PDU Lite 7-CH 0.5U Switch: [DP-0042](./rackmate_accessories.md) 
 * 10-inch Server Rack 0.5U Rack cable management panel-with 3 D-Rings [DP-0044](./rackmate_accessories_2.md)
-<font color=red>DC PDU Lite 7-CH 0.5U Switch DP-0042 has been launched!!!</font>
+
+<br><font color=red>DC PDU Lite 7-CH 0.5U Switch DP-0042 has been launched!!!</font><br>
 
 
 ## Multiple Usages accroding to your requrement
