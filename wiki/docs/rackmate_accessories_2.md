@@ -77,56 +77,69 @@ The 10-inch Server Rack 0.5U Rack Cable Management Panel with 3 D-Rings is a cab
 
 * DeskPi RackMate T1: 
 
-US:  https://www.amazon.com/dp/B0CSCWVTQ7/
-UK: https://www.amazon.co.uk/dp/B0CS6MHCY8
+[US Store](https://www.amazon.com/dp/B0CSCWVTQ7/)
+<br>
+[UK Store](https://www.amazon.co.uk/dp/B0CS6MHCY8)
 
 * Network Patch Panel 12 Port CAT6 10inch 0.5U
 
-US:  https://www.amazon.com/dp/B0D5XPNHHF/
-UK:  https://www.amazon.co.uk/dp/B0D5Q6CJ1J
+[US Store](https://www.amazon.com/dp/B0D5XPNHHF/)
+<br>
+[UK Store](https://www.amazon.co.uk/dp/B0D5Q6CJ1J)
 
 * SBC Shell 10 inch 1U Rack
 
-US: https://www.amazon.com/dp/B0D5XMM7HL
-UK:https://www.amazon.co.uk/dp/B0D5QL66MB
+[US Store](https://www.amazon.com/dp/B0D5XMM7HL)
+<br> 
+[UK Store](https://www.amazon.co.uk/dp/B0D5QL66MB)
 
 * Mini ITX Shell 10 inch 1U Rack
 
-US: https://www.amazon.com/dp/B0D5XNDFDZ/
-UK: https://www.amazon.co.uk/dp/B0D5QSB8GY
+[US Store](https://www.amazon.com/dp/B0D5XNDFDZ/)
+<br> 
+[UK Store](https://www.amazon.co.uk/dp/B0D5QSB8GY)
 
 * Blank Pannel 10 inch 1U Rack
 
-US: https://www.amazon.com/dp/B0D5XKZ714/
-UK: https://www.amazon.co.uk/dp/B0D5QP91R9
-
+[US Store]( https://www.amazon.com/dp/B0D5XKZ714/)
+<br> 
+[UK Store]( https://www.amazon.co.uk/dp/B0D5QP91R9)
+)
 * SBC Shell 10 inch 1U Rack, with 2PCS Micro HDMI to HDMI Adapter Board for Raspberry Pi 5 / Pi 4B
-
-US: https://www.amazon.com/dp/B0D9NGC4DH/
-UK: https://www.amazon.co.uk/dp/B0D9NGC4DH
-
+)
+[US Store]( https://www.amazon.com/dp/B0D9NGC4DH/)
+<br> 
+[UK Store]( https://www.amazon.co.uk/dp/B0D9NGC4DH)
+)
 * Micro HDMI to HDMI Adapter Board for Raspberry Pi 5 / Pi 4B
-
-US: https://www.amazon.com/dp/B0D9LDQ7DY/
-UK: https://www.amazon.co.uk/dp/B0D9LDQ7DY
+)
+[US Store]( https://www.amazon.com/dp/B0D9LDQ7DY/)
+<br> 
+[UK Store]( https://www.amazon.co.uk/dp/B0D9LDQ7DY)
 
 * GeeekPi 4PCS Cat6A Ethernet Cable, Snagless Short Shielded Network Cable, White (20 cm/0.65 ft)
 
-US: (0.2m) https://www.amazon.com/dp/B0DDXLCYF6/
-UK (0.2m) : https://www.amazon.co.uk/dp/B0DDX78486  
-UK (0.5m)：https://www.amazon.co.uk/dp/B0DDXQH81J
+[US Store (0.2m)](https://www.amazon.com/dp/B0DDXLCYF6/)
+<br> 
+[UK Store (0.2m)](https://www.amazon.co.uk/dp/B0DDX78486)
+<br> 
+[UK Store (0.5m)] (https(//www.amazon.co.uk/dp/B0DDXQH81J)
 
 * Rack Shell 10 Inch 0.5U Rack Shelf
 
-US: https://www.amazon.com/dp/B0DFHCM3YG
-UK:  https://www.amazon.co.uk/dp/B0DFLQJ436
+[US Store](https://www.amazon.com/dp/B0DFHCM3YG)
+<br> 
+[UK Store](https://www.amazon.co.uk/dp/B0DFLQJ436)
 
 * DeskPi 10inch Server Rack 0.5U Rack Cable Management Panel-with 3 D-Rings
 
-US：https://www.amazon.com/dp/B0DGP8TT6Q
-UK：https://www.amazon.co.uk/dp/B0DFLQJ436
+[US Store](https://www.amazon.com/dp/B0DGP8TT6Q)
+<br> 
+[UK Store](https://www.amazon.co.uk/dp/B0DFLQJ436)
 
 * DeskPi DC PDU Lite 7-CH 0.5U for DeskPi Rackmate T1
 
-US： https://www.amazon.com/dp/B0DGFZVXF6
-UK：https://www.amazon.co.uk/dp/B0DGGB14KN
+[US Store] https(//www.amazon.com/dp/B0DGFZVXF6)
+<br> 
+[UK Store]：https(//www.amazon.co.uk/dp/B0DGGB14KN)
+
