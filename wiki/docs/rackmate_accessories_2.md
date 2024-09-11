@@ -69,7 +69,7 @@ The 10-inch Server Rack 0.5U Rack Cable Management Panel with 3 D-Rings is a cab
 * CAT6A Ethernet Cable(0.2M) [L-0094](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-2m-snagless-short-shielded-cat6a-ethernet-cable) 
 * CAT6A Ethernet Cable(0.5M) [L-0095](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-5m-snagless-short-shielded-cat6a-ethernet-cable) 
 * DC PDU Lite 7-CH 0.5U for DeskPi Rackmate T1:[DP-0042](https://deskpi.com/collections/new-arrival/products/deskpi-dc-pdu-lite-7-ch-0-5u-for-deskpi-rackmate-t1)
-* 10-inch Server Rack 0.5U Rack Cable Management Panel-with 3 D-Rings [DP-0044](https://deskpi.com/collections/new-arrival/products/10inch-server-rack-0-5u-rack-cable-management-panel-with-3-d-rings)
+* 10-inch Server Rack 0.5U Rack Cable Management Panel-with 3 D-Rings: [DP-0044](https://deskpi.com/collections/new-arrival/products/10inch-server-rack-0-5u-rack-cable-management-panel-with-3-d-rings)
 
 ![DP-0044DC09](./imgs/DP-0044/DP-0044-05.jpg)
 
@@ -139,7 +139,7 @@ The 10-inch Server Rack 0.5U Rack Cable Management Panel with 3 D-Rings is a cab
 
 * DeskPi DC PDU Lite 7-CH 0.5U for DeskPi Rackmate T1
 
-[US Store] https(//www.amazon.com/dp/B0DGFZVXF6)
+[US Store](https://www.amazon.com/dp/B0DGFZVXF6)
 <br> 
-[UK Store]：https(//www.amazon.co.uk/dp/B0DGGB14KN)
+[UK Store](https://www.amazon.co.uk/dp/B0DGGB14KN)
 
