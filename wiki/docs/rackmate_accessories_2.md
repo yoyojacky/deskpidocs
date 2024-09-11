@@ -59,7 +59,7 @@ The 10-inch Server Rack 0.5U Rack Cable Management Panel with 3 D-Rings is a cab
 ### Accessories Purchase URL
 
 ![shoppingChart](./imgs/picomate/shoppingchart.jpg){: style="height:50px;width:50px"}
-![thumbsup](./imgs/DP-0042/update/thumbsup.png){: style="height:50px;width:50px"}
+![thumbsup](./imgs/rackmateT1/update/thumbsup.png){: style="height:50px;width:50px"}
 
 * Rack Shell [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
 * Blank Pannel [DP-0032](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-blank-pannel)
