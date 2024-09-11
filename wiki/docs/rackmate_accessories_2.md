@@ -68,7 +68,65 @@ The 10-inch Server Rack 0.5U Rack Cable Management Panel with 3 D-Rings is a cab
 * Mini ITX Shell [DP-0035](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-mini-itx-shell)
 * CAT6A Ethernet Cable(0.2M) [L-0094](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-2m-snagless-short-shielded-cat6a-ethernet-cable) 
 * CAT6A Ethernet Cable(0.5M) [L-0095](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-5m-snagless-short-shielded-cat6a-ethernet-cable) 
-* 10-inch Server Rack 0.5U Rack Cable Management Panel-with 3 D-Rings [DP-0044](https://deskpi.com )
+* DC PDU Lite 7-CH 0.5U for DeskPi Rackmate T1:[DP-0042](https://deskpi.com/collections/new-arrival/products/deskpi-dc-pdu-lite-7-ch-0-5u-for-deskpi-rackmate-t1)
+* 10-inch Server Rack 0.5U Rack Cable Management Panel-with 3 D-Rings [DP-0044](https://deskpi.com/collections/new-arrival/products/10inch-server-rack-0-5u-rack-cable-management-panel-with-3-d-rings)
 
 ![DP-0044DC09](./imgs/DP-0044/DP-0044-05.jpg)
 
+### Amazon Links:
+
+* DeskPi RackMate T1: 
+
+US:  https://www.amazon.com/dp/B0CSCWVTQ7/
+UK: https://www.amazon.co.uk/dp/B0CS6MHCY8
+
+* Network Patch Panel 12 Port CAT6 10inch 0.5U
+
+US:  https://www.amazon.com/dp/B0D5XPNHHF/
+UK:  https://www.amazon.co.uk/dp/B0D5Q6CJ1J
+
+* SBC Shell 10 inch 1U Rack
+
+US: https://www.amazon.com/dp/B0D5XMM7HL
+UK:https://www.amazon.co.uk/dp/B0D5QL66MB
+
+* Mini ITX Shell 10 inch 1U Rack
+
+US: https://www.amazon.com/dp/B0D5XNDFDZ/
+UK: https://www.amazon.co.uk/dp/B0D5QSB8GY
+
+* Blank Pannel 10 inch 1U Rack
+
+US: https://www.amazon.com/dp/B0D5XKZ714/
+UK: https://www.amazon.co.uk/dp/B0D5QP91R9
+
+* SBC Shell 10 inch 1U Rack, with 2PCS Micro HDMI to HDMI Adapter Board for Raspberry Pi 5 / Pi 4B
+
+US: https://www.amazon.com/dp/B0D9NGC4DH/
+UK: https://www.amazon.co.uk/dp/B0D9NGC4DH
+
+* Micro HDMI to HDMI Adapter Board for Raspberry Pi 5 / Pi 4B
+
+US: https://www.amazon.com/dp/B0D9LDQ7DY/
+UK: https://www.amazon.co.uk/dp/B0D9LDQ7DY
+
+* GeeekPi 4PCS Cat6A Ethernet Cable, Snagless Short Shielded Network Cable, White (20 cm/0.65 ft)
+
+US: (0.2m) https://www.amazon.com/dp/B0DDXLCYF6/
+UK (0.2m) : https://www.amazon.co.uk/dp/B0DDX78486  
+UK (0.5m)：https://www.amazon.co.uk/dp/B0DDXQH81J
+
+* Rack Shell 10 Inch 0.5U Rack Shelf
+
+US: https://www.amazon.com/dp/B0DFHCM3YG
+UK:  https://www.amazon.co.uk/dp/B0DFLQJ436
+
+* DeskPi 10inch Server Rack 0.5U Rack Cable Management Panel-with 3 D-Rings
+
+US：https://www.amazon.com/dp/B0DGP8TT6Q
+UK：https://www.amazon.co.uk/dp/B0DFLQJ436
+
+* DeskPi DC PDU Lite 7-CH 0.5U for DeskPi Rackmate T1
+
+US： https://www.amazon.com/dp/B0DGFZVXF6
+UK：https://www.amazon.co.uk/dp/B0DGGB14KN
