@@ -1,6 +1,6 @@
 # DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B
 
-* SKU: DP-0045 
+* SKU: DP-0046
 * Name: DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B
 
 ![DP-0046DC09](./imgs/DP-0046/DP-0046-main.jpg)
