@@ -61,6 +61,7 @@ The 10-inch Server Rack 0.5U Rack Cable Management Panel with 3 D-Rings is a cab
 ![shoppingChart](./imgs/picomate/shoppingchart.jpg){: style="height:50px;width:50px"}
 ![thumbsup](./imgs/rackmateT1/update/thumbsup.png){: style="height:50px;width:50px"}
 
+* Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0046](https://deskpi.com/)
 * Rack Shell [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
 * Blank Pannel [DP-0032](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-blank-pannel)
 * SBC Shell [DP-0033](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-sbc-shell)

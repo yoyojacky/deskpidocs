@@ -61,22 +61,15 @@ This design allows direct observation of the cabinet's interior, and users can a
 
 * Please search the accessories in <font color=red>[https://deskpi.com/](https://deskpi.com) </font></br> or click the links below. 
 
-### Accessories Purchase URL
+## Accessories Details 
 
-![shoppingChart](./imgs/picomate/shoppingchart.jpg){: style="height:50px;width:50px"}
-![thumbsup](./imgs/rackmateT1/update/thumbsup.png){: style="height:50px;width:50px"}
+<font color=red> NEW arrival!!!</font><br>
 
-* Rack Shell:  [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
-* Blank Pannel; [DP-0032](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-blank-pannel)
-* SBC Shell:  [DP-0033](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-sbc-shell)
-* 10-Inch Network Switch: [DP-0034](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-10-inch-network-switch)
-* Mini ITX Shell: [DP-0035](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-mini-itx-shell)
-* CAT6A Ethernet Cable(0.2M): [L-0094](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-2m-snagless-short-shielded-cat6a-ethernet-cable) 
-* CAT6A Ethernet Cable(0.5M): [L-0095](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-5m-snagless-short-shielded-cat6a-ethernet-cable) 
-* DC PDU Lite 7-CH 0.5U Switch: [DP-0042](./rackmate_accessories.md) 
-* 10-inch Server Rack 0.5U Rack cable management panel-with 3 D-Rings [DP-0044](./rackmate_accessories_2.md)
+* DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0046](./rackmate_accessories_3.md)
 
-<br><font color=red>DC PDU Lite 7-CH 0.5U Switch DP-0042 has been launched!!!</font><br>
+* DC PDU Lite 7-CH 0.5U for DeskPi Rackmate T1: [DP-0042](./rackmate_accessories.md)
+
+* 10-inch Server Rack 0.5U Rack Cable Management Pannel-With 3 D-rings: [DP-0044](./rackmate_accessories_2.md)
 
 
 ## Multiple Usages accroding to your requrement
@@ -96,6 +89,7 @@ This design allows direct observation of the cabinet's interior, and users can a
 ![shoppingChart](./imgs/picomate/shoppingchart.jpg){: style="height:50px;width:50px"}
 ![thumbsup](./imgs/rackmateT1/update/thumbsup.png){: style="height:50px;width:50px"}
 
+* DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0046](https://deskpi.com/)
 * Rack Shell [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
 * Blank Pannel [DP-0032](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-blank-pannel)
 * SBC Shell [DP-0033](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-sbc-shell)
