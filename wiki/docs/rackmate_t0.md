@@ -24,10 +24,11 @@ The RackMate T0 is a robust and versatile 4U server rack designed to meet the de
 
 ## Specifications
 
-- **Depth**: 10 inches
+- **Width**: 10 inches
+- **Depth**: 200mm 
 - **Height**: 4U
-- **External Dimensions**: 280mm*200mm*274mm
-- **Internal Dimensions**: 222mm*200mm*241mm
+- **External Dimensions**: 280x200x274mm
+- **Internal Dimensions**: 222x200x241mm
 - **Easy to install**: 4U Rack is shipped assembled, saving you the trouble of
 installation. 
 - **Material**: High-strength aluminum, steel and acrylic.

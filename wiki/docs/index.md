@@ -9,6 +9,8 @@ Here you can provide product descriptions, product features, product documents, 
 
 ### DeskPi Series
 
+  - DeskPi Lite Pi5 Case [DP-0038](https://deskpi.com/collections/) ![DeskPi Lite Pi5 Case](./imgs/DP-0038/DP-0038-01-02.jpg)
+
   - DeskPi RackMate T0 [DP-0047](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-t1-rackmount-10-inch-4u-server-cabinet-for-network-servers-audio-and-video-equipment) ![DeskPi RackMate T0](./imgs/rackmate_t0/DP-0047-01-01.jpg)
 
   - DeskPi RackMate T1 [DP-0022](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-t1-2) ![DeskPi RackMate T1](./imgs/rackmateT1/DP-0022-0022-main.jpg)
