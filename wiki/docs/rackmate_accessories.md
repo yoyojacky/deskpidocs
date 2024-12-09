@@ -59,6 +59,11 @@ The DP-0042 DC PDU is suitable for a variety of applications, including but not 
 * DC PDU Lite 7-CH 0.5U for DeskPi Rackmate T1:[DP-0042](https://deskpi.com/collections/new-arrival/products/deskpi-dc-pdu-lite-7-ch-0-5u-for-deskpi-rackmate-t1)
 * 10-inch Server Rack 0.5U Rack Cable Management Panel-with 3 D-Rings: [DP-0044](https://deskpi.com/collections/new-arrival/products/10inch-server-rack-0-5u-rack-cable-management-panel-with-3-d-rings)
 
+### Optional Accessories Details
+* [Accessories 1](./rackmate_accessories.md)
+* [Accessories 2](./rackmate_accessories_2.md)
+* [Accessories 3](./rackmate_accessories_3.md)
+* [Accessories 4](./rackmate_accessories_4.md)
 
 ### Amazon Links:
 
@@ -131,5 +136,6 @@ The DP-0042 DC PDU is suitable for a variety of applications, including but not 
 [UK Store](https://www.amazon.co.uk/dp/B0DGGB14KN)
 
 ## DeskPi 
+
 ![DeskPi announcement](./imgs/rackmateT1/update/DP-0022-16.png)
 

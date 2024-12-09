@@ -31,6 +31,7 @@ Here you can provide product descriptions, product features, product documents, 
 
   - DeskPi ITX Case kit for Super6C [DP-0010](https://deskpi.com/collections/deskpi-itxcasekit) ![DeskPi ITC Case kit for Super6C](./imgs/itxcase/cm4itxcase14.jpg)
 
+
 ### PicoMate Series
   - PicoMate [DP-0012](https://deskpi.com/collections/deskpi-picomate/products/new-deskpi-picomate-v1-0-for-raspberry-pi-pico-pico-w):  
 

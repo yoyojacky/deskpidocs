@@ -74,5 +74,11 @@ Perfectly suited for creating a home lab or managing devices for a Home Assistan
 
 ![product outlook](./imgs/rackmate_t0/DP-0047-07.jpg)
 
+### Optional Accessories
+
+* [Accessories 1](./rackmate_accessories.md)
+* [Accessories 2](./rackmate_accessories_2.md)
+* [Accessories 3](./rackmate_accessories_3.md)
+* [Accessories 4](./rackmate_accessories_4.md)
 
 [GO BACK TO HOME PAGE](https://wiki.deskpi.com/)
