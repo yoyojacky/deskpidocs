@@ -95,7 +95,7 @@ The 1U RackMount is specifically designed for the Raspberry Pi 4B and Raspberry 
 
 * Please assemble it according to following figures.
 
-![DP-0039ins](./imgs/DP-0039/DP-0039-PL.jpg)
+![DP-0039ins](./imgs/DP-0039/DP-0039-IN.jpg)
 
 
 ## Package Includes 
