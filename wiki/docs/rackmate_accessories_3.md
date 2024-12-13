@@ -199,15 +199,15 @@ Be careful not to short any pins on the Raspberry Pi.
 
 * Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0046](https://deskpi.com/)
 
-* Rack Shell [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
+* Rack shelf [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
 
 * Blank Pannel [DP-0032](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-blank-pannel)
 
-* SBC Shell [DP-0033](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-sbc-shell)
+* SBC shelf [DP-0033](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-accessories-sbc-shell)
 
 * 10-Inch Network Switch [DP-0034](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-10-inch-network-switch)
 
-* Mini ITX Shell [DP-0035](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-mini-itx-shell)
+* Mini ITX shelf [DP-0035](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi-rackmate-accessory-mini-itx-shell)
 
 * CAT6A Ethernet Cable(0.2M) [L-0094](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-2m-snagless-short-shielded-cat6a-ethernet-cable) 
 
@@ -231,13 +231,13 @@ Be careful not to short any pins on the Raspberry Pi.
 <br>
 [UK Store](https://www.amazon.co.uk/dp/B0D5Q6CJ1J)
 
-* SBC Shell 10 inch 1U Rack
+* SBC shelf 10 inch 1U Rack
 
 [US Store](https://www.amazon.com/dp/B0D5XMM7HL)
 <br> 
 [UK Store](https://www.amazon.co.uk/dp/B0D5QL66MB)
 
-* Mini ITX Shell 10 inch 1U Rack
+* Mini ITX shelf 10 inch 1U Rack
 
 [US Store](https://www.amazon.com/dp/B0D5XNDFDZ/)
 <br> 
@@ -249,7 +249,7 @@ Be careful not to short any pins on the Raspberry Pi.
 <br> 
 [UK Store]( https://www.amazon.co.uk/dp/B0D5QP91R9)
 
-* SBC Shell 10 inch 1U Rack, with 2PCS Micro HDMI to HDMI Adapter Board for Raspberry Pi 5 / Pi 4B
+* SBC shelf 10 inch 1U Rack, with 2PCS Micro HDMI to HDMI Adapter Board for Raspberry Pi 5 / Pi 4B
 
 [US Store]( https://www.amazon.com/dp/B0D9NGC4DH/)
 <br> 
@@ -269,7 +269,7 @@ Be careful not to short any pins on the Raspberry Pi.
 <br> 
 [UK Store (0.5m)](https://www.amazon.co.uk/dp/B0DDXQH81J)
 
-* Rack Shell 10 Inch 0.5U Rack Shelf
+* Rack shelf 10 Inch 0.5U Rack Shelf
 
 [US Store](https://www.amazon.com/dp/B0DFHCM3YG)
 <br> 
