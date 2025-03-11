@@ -80,5 +80,7 @@ Perfectly suited for creating a home lab or managing devices for a Home Assistan
 * [Accessories 2](./rackmate_accessories_2.md)
 * [Accessories 3](./rackmate_accessories_3.md)
 * [Accessories 4](./rackmate_accessories_4.md)
+* [Accessories 5](./rackmate_accessories_5.md) <font color=red>[NEW]</font>
+* [Accessories 6](./rackmate_accessories_6.md) <font color=red>[NEW]</font>
 
 [GO BACK TO HOME PAGE](https://wiki.deskpi.com/)

@@ -73,6 +73,11 @@ This design allows direct observation of the cabinet's interior, and users can a
 
 * 10-inch Server Rack 0.5U Rack Cable Management Pannel-With 3 D-rings: [DP-0044](./rackmate_accessories_2.md)
 
+* 10-inch 1U Rack Cable Entry Panel with Brush Strip: [DP-0055](./rackmate_accessories_5.md)
+
+* T1 0.5U Heavy Duty Rack Shelf for 10-inch server: [DP-0056](./rackmate_accessories_6.md)
+
+
 
 ## Multiple Usages accroding to your requrement
 ![Usages](./imgs/rackmateT1/update/DP-0022-13.png)
@@ -101,6 +106,8 @@ This design allows direct observation of the cabinet's interior, and users can a
 * CAT6A Ethernet Cable(0.5M) [L-0095](https://deskpi.com/collections/new-arrival/products/4-pack-3-8mm-0-5m-snagless-short-shielded-cat6a-ethernet-cable) 
 * DC PDU Lite 7-CH 0.5U for DeskPi Rackmate T1:[DP-0042](https://deskpi.com/collections/new-arrival/products/deskpi-dc-pdu-lite-7-ch-0-5u-for-deskpi-rackmate-t1)
 * 10-inch Server Rack 0.5U Rack Cable Management Panel-with 3 D-Rings: [DP-0044](https://deskpi.com/collections/new-arrival/products/10inch-server-rack-0-5u-rack-cable-management-panel-with-3-d-rings)
+
+More accessories please visit: [DeskPi RackMate Accessories](./rackmate_accessories_allinone.md)
 
 ### Amazon Links:
 
