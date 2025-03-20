@@ -65,9 +65,9 @@ This design allows direct observation of the cabinet's interior, and users can a
 
 <font color=red> NEW arrival!!!</font><br>
 
-* DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0046](./rackmate_accessories_3.md)
+* DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5: [DP-0046](./rackmate_accessories_3.md)
 
-* DeskPi Rackmate 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0039](./rackmate_accessories_4.md)
+* DeskPi Rackmate 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5: [DP-0039](./rackmate_accessories_4.md)
 
 * DC PDU Lite 7-CH 0.5U for DeskPi Rackmate T1: [DP-0042](./rackmate_accessories.md)
 

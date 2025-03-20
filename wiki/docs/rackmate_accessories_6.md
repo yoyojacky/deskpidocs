@@ -45,9 +45,9 @@ The DeskPi Rackmate 10-inch 0.5U Heavy Duty Rack Shelf is designed specifically 
 ![shoppingChart](./imgs/picomate/shoppingchart.jpg){: style="height:50px;width:50px"}
 ![thumbsup](./imgs/rackmateT1/update/thumbsup.png){: style="height:50px;width:50px"}
 
-* Rackmate 10-inch 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0046](https://deskpi.com/)
+* Rackmate 10-inch 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5: [DP-0046](https://deskpi.com/)
 
-* Rackmate 10-inch 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0039](https://deskpi.com/)
+* Rackmate 10-inch 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5: [DP-0039](https://deskpi.com/)
 
 * Rack shelf [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
 

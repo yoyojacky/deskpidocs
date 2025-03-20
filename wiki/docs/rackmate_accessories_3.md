@@ -1,7 +1,7 @@
-# DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B
+# DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5
 
 * SKU: DP-0046
-* Name: DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B
+* Name: DeskPi Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5
 
 ![DP-0046DC09](./imgs/DP-0046/DP-0046-main.jpg)
 
@@ -94,6 +94,9 @@ The 2U RackMount is specifically designed for the Raspberry Pi 4B and Raspberry 
 * Please note the key step in the installation:
 
 ![DP-004610](./imgs/DP-0046/DP-0046-09.jpg)
+
+![DP-004611](./imgs/DP-0046/DR-0046-ZT2.jpg)
+
 
 ## Package Includes 
 
@@ -197,7 +200,7 @@ Be careful not to short any pins on the Raspberry Pi.
 ![shoppingChart](./imgs/picomate/shoppingchart.jpg){: style="height:50px;width:50px"}
 ![thumbsup](./imgs/rackmateT1/update/thumbsup.png){: style="height:50px;width:50px"}
 
-* Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0046](https://deskpi.com/)
+* Rackmate 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5: [DP-0046](https://deskpi.com/)
 
 * Rack shelf [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
 

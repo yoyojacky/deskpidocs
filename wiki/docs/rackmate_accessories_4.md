@@ -1,8 +1,8 @@
 
-# DeskPi Rackmate 10-inch 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B
+# DeskPi Rackmate 10-inch 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5
 
 * SKU: DP-0039
-* Name: DeskPi Rackmate 10-inch 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B
+* Name: DeskPi Rackmate 10-inch 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5
 
 ![DP-0039DC09](./imgs/DP-0039/DP-0039-1.jpg)
 
@@ -102,6 +102,9 @@ The 1U RackMount is specifically designed for the Raspberry Pi 4B and Raspberry 
 
 ![DP-0039pl](./imgs/DP-0039/DP-0039-PL.jpg)
 
+![DP-0039PL](./imgs/DP-0039/DP-0039-11.jpg)
+
+
 ## How to enable PCIe function on Raspberry Pi 5?
 
 To enable PCIe functionality on the Raspberry Pi 5, follow these steps:
@@ -200,9 +203,9 @@ Be careful not to short any pins on the Raspberry Pi.
 ![shoppingChart](./imgs/picomate/shoppingchart.jpg){: style="height:50px;width:50px"}
 ![thumbsup](./imgs/rackmateT1/update/thumbsup.png){: style="height:50px;width:50px"}
 
-* Rackmate 10-inch 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0046](https://deskpi.com/)
+* Rackmate 10-inch 2U Rack Mount with PCIE NVME Board for Raspberry Pi 5: [DP-0046](https://deskpi.com/)
 
-* Rackmate 10-inch 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5/4B: [DP-0039](https://deskpi.com/)
+* Rackmate 10-inch 1U Rack Mount with PCIE NVME Board for Raspberry Pi 5: [DP-0039](https://deskpi.com/)
 
 * Rack shelf [DP-0031](https://deskpi.com/collections/deskpi-rack-mate/products/deskpi)
 
