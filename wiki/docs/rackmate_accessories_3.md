@@ -8,7 +8,7 @@
 ## Description
 The 2U RackMount is specifically designed for the Raspberry Pi 4B and Raspberry Pi 5, serving as a robust and efficient rack solution to house these single-board computers within a standard 10-inch server rack. Ideal for data centers or network installations that require space-saving while looking to expand computing capabilities, this 2U rack is tailored to perfectly accommodate the Raspberry Pi 4B and Raspberry Pi 5, ensuring optimal compatibility and performance.
 
-![DP-0046DC01](./imgs/DP-0046/DP-0046-01.jpg)
+![DP-0046DC01](./imgs/DP-0046/DP-0046-ZT2.jpg)
 
 ## Features
 
@@ -32,7 +32,7 @@ The 2U RackMount is specifically designed for the Raspberry Pi 4B and Raspberry 
 
 * **Versatility:** The Rackmount can be configured in various ways to suit different use cases, whether for development, testing, or deployment in a production environment.
 
-![DP-0046DC02](./imgs/DP-0046/DP-0046-02.jpg)
+![DP-0046DC02](./imgs/DP-0046/DP-0046-ZT3.jpg)
 
 ### Specifications
 
@@ -94,9 +94,6 @@ The 2U RackMount is specifically designed for the Raspberry Pi 4B and Raspberry 
 * Please note the key step in the installation:
 
 ![DP-004610](./imgs/DP-0046/DP-0046-09.jpg)
-
-![DP-004611](./imgs/DP-0046/DR-0046-ZT2.jpg)
-
 
 ## Package Includes 
 
