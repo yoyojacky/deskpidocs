@@ -76,11 +76,12 @@ Perfectly suited for creating a home lab or managing devices for a Home Assistan
 
 ### Optional Accessories
 
-* [Accessories 1](./rackmate_accessories.md)
-* [Accessories 2](./rackmate_accessories_2.md)
-* [Accessories 3](./rackmate_accessories_3.md)
-* [Accessories 4](./rackmate_accessories_4.md)
-* [Accessories 5](./rackmate_accessories_5.md) <font color=red>[NEW]</font>
-* [Accessories 6](./rackmate_accessories_6.md) <font color=red>[NEW]</font>
+* [SKU:DP-0042](./rackmate_accessories.md)
+* [SKU:DP-0044](./rackmate_accessories_2.md)
+* [SKU:DP-0046](./rackmate_accessories_3.md)
+* [SKU:DP-0039](./rackmate_accessories_4.md)
+* [SKU:DP-0055](./rackmate_accessories_5.md) <font color=red>[NEW]</font>
+* [SKU:DP-0056](./rackmate_accessories_6.md) <font color=red>[NEW]</font>
+* [SKU:DP-0073](./rackmate_accessories_7.md) <font color=red>[NEW]</font>
 
 [GO BACK TO HOME PAGE](https://wiki.deskpi.com/)

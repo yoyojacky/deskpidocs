@@ -112,7 +112,7 @@ The DeskPi Lite Pi5 case is an excellent choice for those looking to create a ho
 
 ## How to assemble the case 
 
-TBD.
+![DeskPi Lite Pi5 Case installation](./imgs/DP-0038/DP-0038-10.jpg)
 
 ## Package Includes
 
