@@ -1,5 +1,9 @@
 # Super4C 
 
+## Product SKU
+
+* SKU: DP-0040
+
 ## Introduction 
 The Super4C is a cluster - type hardware built on the Raspberry Pi CM5.
 It supports four channels of CM5 and extends almost all the interfaces of CM5, providing users with powerful device - connection capabilities. Meanwhile, the hardware also integrates an ESP32 processing module, which offers remote management capabilities for the entire cluster of devices. For the sake of convenience in explanation, this document will refer to this cluster board hardware as the "motherboard" in the following sections.
