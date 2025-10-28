@@ -482,6 +482,9 @@ and before that, we need to create a file called ping.yml.
 ![yaml](./imgs/super6c/yaml.png)
 
 ##FAQ
+* Q: Can Super6c support the CM5 module?
+  A: Only partial support is possible. This is because the CM5 had not yet been released when Super6c went into mass production. Additionally, due to changes in the functionality of the CM5, there may be compatibility issues with the USB or NVMe components of Super6c. It is recommended that users of the CM5 module purchase Super4C instead.
+
 * Q: What can I do with Super6C ?
   A: Home server (homelab) and cloud apps hosting. Learn Kubernetes, Docker Swarm, Serverless, Microservices on bare metal Cloud-native apps testing environment Learn concepts of distributed Machine Learning apps Prototype and learn cluster applications, parallel computing, and distributed computing concepts Host K8S, K3S, Minecraft, Plex, Owncloud, Nextcloud, Seafile, Minio, Tensorflow
 
