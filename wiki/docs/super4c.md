@@ -9,7 +9,6 @@ Super4C is a cluster-based hardware built on the Raspberry Pi CM5.
 This hardware supports four channels of CM5 and extends almost all interfaces of the CM5, providing users with powerful device connectivity. 
 Additionally, the hardware integrates an ESP32 processing module, offering remote management capabilities for the entire cluster device. 
 For convenience, this document will refer to this cluster board hardware as the "motherboard" in subsequent sections.
-It supports four channels of CM5 and extends almost all the interfaces of CM5, providing users with powerful device - connection capabilities. Meanwhile, the hardware also integrates an ESP32 processing module, which offers remote management capabilities for the entire cluster of devices. For the sake of convenience in explanation, this document will refer to this cluster board hardware as the "motherboard" in the following sections.
 
 <font color=red> Compatible with Raspberry Pi CM5 Only</font><br> 
 
@@ -19,32 +18,34 @@ It supports four channels of CM5 and extends almost all the interfaces of CM5, p
 * Standard mini ITX form factor
 * Supports all Raspberry Pi CM5 modules
 * External DC 19V/4.73A power input with redundant interface support and reverse polarity protection
-* Four-channel independent DC/DC conversion to provide power for:
+* Four-channel independent DC/DC conversion to provide power for following two
+parts:
   - Independent power reset button (simultaneously resets CM5, NVMe, 2.5Gbps, 1Gbps, SD card, CAM0/1, etc.)
   - Hardware power - on delay (approximately 0.5 seconds each) to avoid inrush current from simultaneous power on
-* 4 - pin fan connector (directly connected to the DC 19V power port)
+* 4-pin fan connector (directly connected to the DC 19V power port)
 * Supports up to four CM5 modules per channel, each with:
   - 1x micro HDMI interface
   - 1x USB 3.0 interface
-  - 1x USB 2.0 interface (Type - C connector, no VBUS output)
+  - 1x USB 2.0 interface (Type-C connector, no VBUS output)
   - 1x 1Gbps Ethernet interface
   - 1x 2.5Gbps Ethernet interface (via USB 3.0 expansion)
   - 1x microSD card interface
-  - 1x M.2 M - key PCIe interface
-  - 1x 4 - pin JST - SH PWM fan interface
+  - 1x M.2 M-key PCIe interface
+  - 1x 4-pin JST-SH PWM fan interface
   - 1x RTC battery interface
   - 2x MIPI DSI/CSI - 2 interfaces
   - Jumper interface (to disable eMMC, EEPROM, etc.)
-* Integrated ESP32 - WROOM - 32E - N4 module
+* Integrated ESP32-WROOM-32E-N4 module
   - Supports 2.4GHz Wi - Fi + Bluetooth with integrated antenna
   - Expanded W5500 100Mbps wired network
-  - 4 - pin UART download interface
-  - 4 - pin I2C expansion interface (for expanding OLED screens, etc.)
+  - 4-pin UART download interface
+  - 4-pin I2C expansion interface (for expanding OLED screens, etc.)
   - Two integrated INA3221 chips for measuring voltage and current of six channels on the board
   - ESP32 pins can individually control the power switch for each channel and the PMIC_EN signal switch for CM5
   - BOOT/EN button
 
 ### Main Power Input 
+
 The main power input uses a barrel power connector (inner diameter 2mm, outer diameter 6.6mm) with a voltage range of DC 12V-20V. 
 Two sockets(DC1, DC2) support redundant power input. 
 When two power supplies with different voltages are inserted simultaneously, the hardware will automatically select the power supply with the higher voltage.
@@ -120,14 +121,13 @@ Press-fit interface, only supports `CM5 Lite` version.
 
 ### M.2 M-Key Interface
 
-* Supports various M.2 M-key cards. with only PCIe signals on the interface.
+* Supports various M.2 M-key cards with only PCIe signals on the interface. 
 * `ONLY` supports the 2280 form factor.
 
 ### Fan Interface
 
 Same interface dimensions and signal definitions as the Raspberry Pi Official
-CM5 IO Board. (compatible with Active cooler's JST cable, but do not compatible
-        with the mouting holes) 
+CM5 IO Board. (compatible with Active cooler's JST cable. but not compatible with the mounting holes) 
 
 ![super4c09](./imgs/super4c/main_09.png) 
 
@@ -207,7 +207,7 @@ The motherboard comes with a pre-installed basic firmware that can perform simpl
 
 #### ESP32 I2C Address
 
-The I2C signals of the ESP32 are connected to both the J12 and J6 headers, as well as the two onboard INA3211 chips. The headers can be used to expand external I2C devices.
+The I2C signals of the ESP32 are connected to both the J12 and J6 headers, as well as the two onboard INA3221 chips. The headers can be used to expand external I2C devices.
 
 | **Item**        | **Channels / Pins / Address**                        | **Description** |
 |-----------------|------------------------------------------------------|-----------------|
@@ -257,7 +257,7 @@ After successfully connecting, enter `192.168.4.1` in a web browser to access th
 After accessing the Web Controller via AP mode, click the `WiFi Setup` button on the page to enter the configuration page.
  - Enter the desired WiFi network (e.g., your home WiFi) in the WiFi SSID field and the password in the WiFi password field.
  - Click `Save & Reboot` to save the configuration and restart the device (this will take about 10 seconds).
- - After rebooting, the OLED screen will display the obtained IP address.o	After rebooting, the OLED screen will display the obtained IP address.
+ - After rebooting, the OLED screen will display the obtained IP address.
 
 ![stationmode](./imgs/super4c/stationmode.jpg)
 
@@ -289,7 +289,7 @@ This allows users to reconnect and reconfigure the WiFi network.
 
 * Using a computer as an example:
 The Super4C's WiFi defaults to `AP mode`.
-First, connect your computer's WiFi to the network named `Super4C` with the defualt password `12345678`. 
+First, connect your computer's WiFi to the network named `Super4C` with the default password `12345678`. 
 Then, enter the IP address `192.168.4.1` in a web browser and press `Enter`.
 
 ![webpage2](./imgs/super4c/webpage2.png)
@@ -331,6 +331,7 @@ From this point, users can remotely control the power of the Super4C, monitor cu
 
 ![webpage7](./imgs/super4c/webpage7.png)
 
+    
 ### OLED Screen Display
 
 After connecting an SSD1306 screen:
@@ -347,7 +348,7 @@ If the W5500 function is not enabled, but an Ethernet cable is connected, the sc
 
 ### Open Source
 Some pages of the schematics and the ESP32 default firmware source code can be open - sourced to facilitate secondary development of the board by community enthusiasts.
-It will be open source once the firmware has been test out. 
+It will be open source once the firmware has been fully test. 
 
 ### Diagram Block 
 
@@ -362,7 +363,7 @@ Lite variants of Compute Modules do not have on-board eMMC. Instead, follow the 
 #### Prerequisites
 To flash the Compute Module eMMC, you need the following:
 * Another computer, referred to in this guide as the host device. You can use Linux (we recommend Raspberry Pi OS or Ubuntu), Windows 11, or macOS.
-*	Super4C mother board.
+*	Super4C motherboard.
 *	A USB-C cable for Compute Module models flashing image. 
 
 #### Set up the IO Board
@@ -520,7 +521,7 @@ Generate & push SSH key (password login is kept):
 ```bash 
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ''
 ansible-galaxy collection install ansible.posix   # only if using FQCN
-ansible-playbook -i inventory/hosts.yaml playbooks/init-ssh.yml
+ansible-playbook -i inventory/hosts.yml playbooks/init-ssh.yml
 ```
 
 ### Basic System Initialization 
@@ -569,7 +570,7 @@ handlers:
 ```
 * Execute:
 ```bash 
-ansible-playbook -i inventory/hosts.yaml playbooks/site.yml
+ansible-playbook -i inventory/hosts.yml playbooks/site.yml
 ```
 ## Create Python Virtualenv & Install Data-Science Packages
 * create `playbooks/venv.yml`
@@ -622,7 +623,7 @@ ansible-playbook -i inventory/hosts.yaml playbooks/site.yml
 ```
 * Execute:
 ```bash 
-ansible-playbook -i inventory/hosts.yaml playbooks/venv.yml
+ansible-playbook -i inventory/hosts.yml playbooks/venv.yml
 ```
 
 ## Gather Hostname, IP, Disk Information 
@@ -656,7 +657,7 @@ ansible-playbook -i inventory/hosts.yaml playbooks/venv.yml
 * Run & view:
 ```bash 
 sudo apt -y install jq
-ansible-playbook -i inventory/hosts.yaml playbooks/gather-host-info.yml
+ansible-playbook -i inventory/hosts.yml playbooks/gather-host-info.yml
 cat report/*.json | jq -s .
 ```
 
@@ -683,8 +684,8 @@ cat report/*.json | jq -s .
 ```
 * Execute: 
 ```bash 
-ansible-playbook -i inventory/hosts.yaml playbooks/shutdown.yml   # shutdown
-ansible-playbook -i inventory/hosts.yaml playbooks/reboot.yml    # reboot  
+ansible-playbook -i inventory/hosts.yml playbooks/shutdown.yml   # shutdown
+ansible-playbook -i inventory/hosts.yml playbooks/reboot.yml    # reboot  
 ```
 ### Get the CPU temperature 
 * Create a file structure like this:
@@ -743,14 +744,14 @@ cpu_temp/
 | Playbook Segment                                 | Purpose & Explanation (English)                                                                                 |
 | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | `---`                                            | YAML file start marker.                                                                                         |
-| `- name: 获取树莓派管理主机的 CPU 温度`                      | Name of the play; it appears in the playbook output.                                                            |
+| `- name: Get Raspberry Pi CPU Temperature`                      | Name of the play; it appears in the playbook output.                                                            |
 | `hosts: rpi`                                     | Targets only hosts in the `[rpi]` group from the inventory.                                                     |
 | `gather_facts: no`                               | Skips the `setup` module to reduce SSH round-trips and speed up execution.                                      |
 | `become: no`                                     | Does not escalate privileges; `vcgencmd` does not require root.                                                 |
 | `ansible.builtin.command: vcgencmd measure_temp` | Executes the temperature-retrieval command on the remote host.                                                  |
 | `register: temp_raw`                             | Captures stdout, stderr, and return code of the command into the variable `temp_raw`.                           |
 | `set_fact: cpu_temp: ...`                        | Uses regex to strip prefixes like `temp=` and the trailing `'C`, leaving only the numeric value (e.g., `47.2`). |
-| `debug: msg: "主机 ..."`                           | Prints the formatted temperature for each host in real time on the console.                                     |
+| `debug: msg: "Host: ..."`                           | Prints the formatted temperature for each host in real time on the console.                                     |
 | `lineinfile: ...`                                | Appends results to `cpu_temp_summary.txt` on the control node for later review or graphing.                     |
 | `delegate_to: localhost`                         | Ensures the file-append task runs on the Ansible control node, not on the managed hosts.                        |
 
@@ -763,7 +764,7 @@ ansible-playbook -i hosts.ini cpu_temp.yml
 ## Quick Reference
 | Action             | Command                                               |
 | ------------------ | ----------------------------------------------------- |
-| Check connectivity | `ansible cm5_cluster -i inventory/hosts.yaml -m ping` |
+| Check connectivity | `ansible cm5_cluster -i inventory/hosts.yml -m ping` |
 | Ad-hoc shell       | `ansible cm5_cluster -a "uname -a"`                   |
 | View JSON report   | `cat ~/cm5-cluster/report/*.json \| jq -s .`          |
 
