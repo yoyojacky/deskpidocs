@@ -5,7 +5,10 @@
 * SKU: DP-0040
 
 ## Introduction 
-The Super4C is a cluster - type hardware built on the Raspberry Pi CM5.
+Super4C is a cluster-based hardware built on the Raspberry Pi CM5. 
+This hardware supports four channels of CM5 and extends almost all interfaces of the CM5, providing users with powerful device connectivity. 
+Additionally, the hardware integrates an ESP32 processing module, offering remote management capabilities for the entire cluster device. 
+For convenience, this document will refer to this cluster board hardware as the "motherboard" in subsequent sections.
 It supports four channels of CM5 and extends almost all the interfaces of CM5, providing users with powerful device - connection capabilities. Meanwhile, the hardware also integrates an ESP32 processing module, which offers remote management capabilities for the entire cluster of devices. For the sake of convenience in explanation, this document will refer to this cluster board hardware as the "motherboard" in the following sections.
 
 <font color=red> Compatible with Raspberry Pi CM5 Only</font><br> 
@@ -42,24 +45,31 @@ It supports four channels of CM5 and extends almost all the interfaces of CM5, p
   - BOOT/EN button
 
 ### Main Power Input 
-The main power input uses a barrel power connector (inner diameter 2mm, outer diameter 6.6mm) with a voltage range of DC 19V. 
-Two connectors (DC1, DC2) support redundant power input. When two power supplies with different voltages are inserted simultaneously, the hardware will automatically select the power supply with the higher voltage.
+The main power input uses a barrel power connector (inner diameter 2mm, outer diameter 6.6mm) with a voltage range of DC 12V-20V. 
+Two sockets(DC1, DC2) support redundant power input. 
+When two power supplies with different voltages are inserted simultaneously, the hardware will automatically select the power supply with the higher voltage.
 
 ![super4c02](./imgs/super4c/main_02.png) 
 
 ### Main Power Protection
 
-The main power supply passes through the protection circuit, voltage and current sampling circuit, reverse polarity protection circuit, and fuse circuit before providing power to the internal components and simultaneously outputting to the J15 connector for powering the external main fan. **Note**: When connecting a fan, ensure that the fan's rated voltage matches the main power supply voltage.
+The main power supply passes through protection circuits, voltage and current sampling circuits, reverse polarity protection, and fuse circuits before powering the internal components and outputting to the J15 connector for external main fan power supply. 
+
+> Note: When connecting a fan, ensure that the fan's rated voltage matches the main power supply voltage.
+
 
 ### Internal 5V DC/DC and Buttons 
 
-The main power supply passes through the internal four - channel DC/DC circuit, converting it into a 5V power supply for each CM5 module and its peripherals. Each DC/DC channel has an independent power reset button (PWR_OFF1/2/3/4). Pressing the button (SW3/4/5/6) will reset the power supply for each CM5 module and its peripheral channel individually.
+The main power supply passes through four-channel DC/DC circuits to convert to 5V power, supplying each CM5 and its peripherals. 
+Each DC/DC channel has an independent power reset button (PWR_OFF1/2/3/4). 
+Pressing the button (SW3/4/5/6) will reset the power of each CM5 and its peripheral channel.
 
 ![super4c03](./imgs/super4c/main_03.png) 
 
 ### Voltage and Current Monitoring 
 
-Both the main power sockets and the four internal 5V power rails are equipped with voltage and current sensing capabilities. Through the I2C interface of the ESP32, two INA3221 chips (covering a total of six channels) are controlled to monitor voltage and current.
+Both the main power sockets and the four internal 5V power rails are equipped with voltage and current sensing capabilities. 
+Through the I2C interface of the ESP32, two INA3221 chips (covering a total of six channels) are controlled to monitor voltage and current.
 
 ![super4c04](./imgs/super4c/main_04.png) 
 
@@ -68,67 +78,85 @@ Both the main power sockets and the four internal 5V power rails are equipped wi
 A total of four CM5 channels are supported, with each channel featuring identical extended interfaces, which are labeled with the numbers 1, 2, 3, and 4 on the hardware silk screen.
 
 ### CM5 Connector
+
 The standard CM5 connector is used, with a total height of 3mm below the board after installation.
 
 ###  micro HDMI 2.0 Interface
-The standard micro HDMI interface is directly connected to the HDMI0 interface of the CM5 module. The 5V power on the interface is provided by the motherboard through a current - limiting switch.
+
+The standard micro HDMI interface is directly connected to the `HDMI0` interface of the CM5 module. The 5V power on the interface is provided by the motherboard through a current - limiting switch.
 
 ### USB3.0 Interface
-The CM5 module features two USB 3.0 interfaces. On this motherboard, the USB 3.0 interface is connected to Port 0. The interface is equipped with a current - limiting switch, which provides a maximum power supply capability of 0.9A to external devices.
+
+The CM5 module features 2 x `USB 3.0` interfaces. 
+On this motherboard, the USB 3.0 interface is connected to `Port 0`. 
+The interface is equipped with a current - limiting switch, which provides a maximum power supply capability of 0.9A to external devices.
 
 ![super4c05](./imgs/super4c/main_05.png) 
 
 ### USB2.0 Interface 
 
-The CM5 module has one USB 2.0 interface, which is connected to the Type-C connector on this motherboard. This interface only connects the D+/D- signals and does not provide power to external devices. It can be used in conjunction with the nRPIBOOT signal to program the CM5.
+The CM5 module has one USB 2.0 interface, which is connected to the Type-C connector on this motherboard. 
+This interface only connects the D+/D- signals and does not provide external power.
+It can be used in conjunction with the `nRPIBOOT` signals to program the CM5.
 
 ![super4c06](./imgs/super4c/main_06.png) 
 
 ### 1Gbps Ethernet Interface
 
-Connected to the native Gigabit Ethernet interface of the CM5, it uses a standard RJ45 connector and does not support Power over Ethernet (PoE).
+Connected to the CM5's native Gigabit Ethernet interface, using a standard `RJ45` connector and `does not support Power over Ethernet (PoE)`.
+
 
 ![super4c07](./imgs/super4c/main_07.png) 
 
 ### 2.5Gbps Ethernet Interface
 
-The CM5 module features two USB 3.0 interfaces. On this motherboard, the 2.5Gbps Ethernet interface is expanded through the USB 3.0 Port 1 of the CM5. This interface also supports Gigabit and Fast Ethernet (100Mbps) connections.
+Extended from the CM5's USB3.0 Port 1, this interface also supports Gigabit and Fast Ethernet (10/100/1000Mbps) connections.
 
 ![super4c08](./imgs/super4c/main_08.png) 
 
 ### microSD Card Interface
 
-A push - type interface that only supports the CM5Lite version.
+Press-fit interface, only supports `CM5 Lite` version.
 
 ### M.2 M-Key Interface
 
-Supports various M.2 M-key cards. The interface only provides PCIe signals and supports the 2280 form factor.
+* Supports various M.2 M-key cards. with only PCIe signals on the interface.
+* `ONLY` supports the 2280 form factor.
 
 ### Fan Interface
 
-The interface size and signal definitions are the same as those on the official CM5 IO board.
+Same interface dimensions and signal definitions as the Raspberry Pi Official
+CM5 IO Board. (compatible with Active cooler's JST cable, but do not compatible
+        with the mouting holes) 
 
 ![super4c09](./imgs/super4c/main_09.png) 
 
 ### RTC Battery Interface
 
-The interface size and signal definitions are the same as those on the official CM5 IO board
+Same interface dimensions and signal definitions as the official CM5 IO board.
 
 ![super4c10](./imgs/super4c/main_10.png) 
 
 ### MIPI Interface
-The interface size and signal definitions are the same as those on the official CM5 IO board, featuring a 22 - pin, 0.5 - pitch FPC (Flexible Printed Circuit) connector.
+
+Same interface dimensions and signal definitions as the official CM5 IO board, featuring a `22-pin`, `0.5-pitch FPC` (Flexible Printed Circuit) connector.
 
 ![super4c11](./imgs/super4c/main_11.png) 
 
 ### Jumper Headers
-The IO voltage is by default configured to +3.3V. The pin definitions correspond one - to - one with the silk - screen markings on the board. These headers also bring out GPIO8/9/10/11 for expansion use. Additionally, the PMIC_ENABLE signal can be controlled either through jumpers or via the ESP32 (with different ESP32 IO pins allocated for controlling different CM5 channels). The figure below shows the jumper pins and silk - screen markings corresponding to the first - channel CM5.
+
+The IO voltage is by default configured to +3.3V, with pin definitions matching
+the silk screen on the board. This pin header  also brings out
+`GPIO8/GPIO9/GPIO10/GPIO11` for expansion use. Additionally, the `PMIC_ENABLE`
+signal can be controlled via jumpers or ESP32(with different ESP32 IO Pin allocations for different CM5 Channels). 
+The figure below shows the jumper pins and silk - screen markings corresponding to the first - channel CM5.
 
 ![super4c12](./imgs/super4c/main_12.png) 
 
 ### ESP32
 
-The model of the ESP32 integrated on the motherboard is ESP32-WROOM-32E-N4. The motherboard comes with a pre-installed basic firmware that can perform simple power control, monitor voltage and current, and display the information in real - time on an OLED screen (SSD1306).
+The model of the ESP32 integrated on the motherboard is `ESP32-WROOM-32E-N4`. 
+The motherboard comes with a pre-installed basic firmware that can perform simple power control, monitor voltage and current, and display the information in real - time on an OLED screen (SSD1306).
 
 #### ESP32 Pin Allocation
 
@@ -194,20 +222,136 @@ The pinout diagram for J12/J6 connectors is as follows:
 
 #### ESP32 Firmware
 
-The ESP32 comes with default firmware:
+The ESP32 comes with default firmware that can:
 
-* It can control the DC/DC power supply for four channels and the PMIC_ENABLE signal for CM5.
-* It can drive the OLED display module (SSD1306).
-* It can monitor the current information of a total of six channels (two DC input ports and four internal 5V power supplies).
-* It can display the collected current information on the OLED screen all at once.
-* It can detect the network connectivity of W5500:
-  - When connected, the OLED screen displays: 192.168.1.222
-  - When not connected, the OLED screen displays: LINK: OFF
+* Display the current WiFi mode and corresponding IP information.
+* Control the power of the four DC/DC channels and the PMIC_ENABLE signals of the CM5.
+* Drive OLED display modules (SSD1306).
+* Sample the current of six channels (two DC input ports and four internal 5V power supplies).
+* Display the sampled current information on the OLED screen.
+* Detect the network connectivity of W5500 (in firmware version _1.1.2: W5500 has not been developed for other functions):
+* If connected, the OLED screen displays: | W55
+* If disconnected, the OLED screen displays: | OFF
+
+### Web Controller Usage Instructions
+
+By flashing the accompanying ESP32 firmware (with web controller functionality) onto the motherboard, remote monitoring of the motherboard can be achieved via a web interface.
+
+#### Web Controller Connection Modes
+
+* AP Mode: 
+Before the ESP32's WiFi connects to a specific network, the motherboard will default to AP mode.
+
+In AP mode, the OLED screen will display "AP mode" with an SSID of `Super4C` and a default password of `12345678` (an SSD1306 OLED module must be installed first, additional purchase required).
+
+![apmode](./imgs/super4c/apmode.jpg)
+
+In AP mode, you can connect a computer or mobile device to the following network:
+
+ - SSID: Super4C
+ - Password: 12345678
+
+After successfully connecting, enter `192.168.4.1` in a web browser to access the Web Controller page.
+
+* Station Mode:
+After accessing the Web Controller via AP mode, click the `WiFi Setup` button on the page to enter the configuration page.
+ - Enter the desired WiFi network (e.g., your home WiFi) in the WiFi SSID field and the password in the WiFi password field.
+ - Click `Save & Reboot` to save the configuration and restart the device (this will take about 10 seconds).
+ - After rebooting, the OLED screen will display the obtained IP address.o	After rebooting, the OLED screen will display the obtained IP address.
+
+![stationmode](./imgs/super4c/stationmode.jpg)
+
+Within the same local network, use a computer or mobile device to open a web browser and enter the IP address displayed on the OLED screen (e.g., "192.168.1.49") to access the Web Controller page.
+
+* Reset Connection Mode:
+In either AP or Station mode, `hold` the `BOOT button` on the motherboard for more than 5 seconds to reset the device to AP mode. 
+This allows users to reconnect and reconfigure the WiFi network.
+
+![reset_connection_mode](./imgs/super4c/reset_connection_mode.png)
+
+#### Web Controller Main Page Instructions
+
+* Main Display Content and Operation Buttons
+
+ - Displays the current mode and IP address.
+ - Displays signal strength.
+ - Displays server uptime.
+ - Displays the current of six current monitoring channels on the motherboard.
+ - Buttons to independently turn on/off the four onboard main power supplies.
+ - Buttons to independently turn on/off the PMIC_ENABLE signals of the four CM5 channels.
+ - Buttons to turn all four power supplies and CM5 channels on/off simultaneously.
+ - Button to toggle all switches.
+ - WiFi settings button.
+
+![webpage1](./imgs/super4c/webpage1.png)
+
+#### Web Controller Page Access and WiFi Configuration
+
+* Using a computer as an example:
+The Super4C's WiFi defaults to `AP mode`.
+First, connect your computer's WiFi to the network named `Super4C` with the defualt password `12345678`. 
+Then, enter the IP address `192.168.4.1` in a web browser and press `Enter`.
+
+![webpage2](./imgs/super4c/webpage2.png)
+
+Click the gray `WiFi Setup` button to enter the WiFi configuration page. 
+Enter the desired wireless network name in the `WiFi SSID` field and the password in the `WiFi password` field. 
+Click the green `Save & Reboot` button to save the configuration to the Super4C motherboard.
+
+![webpage3](./imgs/super4c/webpage3.png)
+
+The motherboard will automatically reboot. Wait for approximately 10 seconds.
+
+![webpage4](./imgs/super4c/webpage4.png)
+
+After rebooting, connect your computer to the same local network as the Super4C. 
+Then, enter the IP address displayed on the OLED screen (e.g., "192.168.1.49") in a web browser and press "Enter". 
+From this point, users can remotely control the power of the Super4C, monitor current, and perform other operations within the local network.
+
+![webpage5](./imgs/super4c/webpage5.png)
+
+#### Web Controller Power Switch Button Operations
+
+* The page has eight independent power switch buttons, including `PSU #1~4` and `CM5 #1~4`.
+* The PSUs are the 5V power units on the board, with a total of four. 
+* Each PSU powers the CM5, NVME, SD, USB, 2.5G network, and other circuits in each channel. Therefore, turning off a PSU will cut power to all the aforementioned circuits in that channel.
+* The `CM5 #1~4` buttons control the `PMIC_ENABLE` signals of each CM5 channel. Turning off a CM5 will only cut power to that channel's CM5, while other circuits such as NVME, SD, USB, and 2.5G network will remain powered.
+* To operate, click the `Switch OFF` or `Switch ON` buttons to perform the power actions.
+
+> When powered on, the corresponding channel status displays "ON" with a colored status light.
+> When powered off, the corresponding channel status displays "OFF" with a gray status light.
+
+> Note: DC1/DC2 are external input power channels and cannot be controlled via switches. Do not confuse them.
+
+![webpage6](./imgs/super4c/webpage6.png)
+
+* The `Switch All OFF` button will turn off all eight switches simultaneously. <font color=red>Use with caution.</font>
+* The `Switch All ON` button will turn on all eight switches simultaneously.<font color=red>Use with caution.</font>
+* The `Toggle All` button will toggle all switches.<font color=red>Use with caution.</font>
+
+![webpage7](./imgs/super4c/webpage7.png)
+
+### OLED Screen Display
+
+After connecting an SSD1306 screen:
+
+* Displays the current WiFi mode and IP address.
+* Displays the current of the six current monitoring channels on the motherboard, in units of Amps (A).
+
+![webpage8](./imgs/super4c/webpage8.jpg)
+![webpage9](./imgs/super4c/webpage9.jpg)
+
+If the W5500 function is not enabled, but an Ethernet cable is connected, the screen will display "W55" when connected and "OFF" when disconnected. 
+
+----
 
 ### Open Source
 Some pages of the schematics and the ESP32 default firmware source code can be open - sourced to facilitate secondary development of the board by community enthusiasts.
 It will be open source once the firmware has been test out. 
 
+### Diagram Block 
+
+![Diagram Block](./imgs/super4c/diagramblock.png)
 
 ### Flash an image to a Compute Module
 To flash the same image to multiple Compute Modules, use the Raspberry Pi Secure Boot Provisioner. To customise an OS image to flash onto those devices, use pi-gen.
