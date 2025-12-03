@@ -124,6 +124,22 @@ Press-fit interface, only supports `CM5 Lite` version.
 * Supports various M.2 M-key cards with only PCIe signals on the interface. 
 * `ONLY` supports the 2280 form factor.
 
+#### Tested SSDs List
+* The following SSDs have been tested and demostrated good performance when used
+with M.2 M-key Interface, supporting only PCIe signals:
+
+<pre> 
+1. WD_BLACK SN7100 PCIe Gen 4.0 NVMe SSD 1TB M.2 2280 M-Key 
+2. WD_BLACK SN8100 PCIe Gen 5.0 NVMe SSD  1TB M.2 2280 M-Key 
+3. WD_BLACK SN770 PCIe Gen 4.0 NVMe SSD  2TB M.2 2280 M-Key 
+4. Fanxiang Jing PCIe Gen 4.0 NVMe SSD 512GB M.2 2280 M-Key 
+5. Lexar NQ790 PCIe Gen 4.0x4 NVMe SSD 2TB M.2 2280 M-Key
+6. SAMSUNG 990 PRO PCIe 4.0 NVMe SSD 2TB M.2 2280 M-Key 
+</pre> 
+
+> NOTE: Due to the limitations of the Raspberry Pi's PCIex1 interface, the
+> performance of high-speed SSDs may be downgraded.  
+
 ### Fan Interface
 
 Same interface dimensions and signal definitions as the Raspberry Pi Official
