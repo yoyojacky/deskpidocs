@@ -64,6 +64,10 @@ Currently, after testing, Super6C is not only able to support the Raspberry Pi C
 |- | Front USB Ports | <font color=red> NO </font> | 
 |- | M.2 NVMe SSD | <font color=red> NO </font> | 
 
+* NOTE: 
+> Raspberry Pi Compute Module 5 does not support on Super6C, Please use `super4C`
+instead. 
+
 ## Featrues
 
 ## Package Includes:
