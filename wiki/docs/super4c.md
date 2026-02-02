@@ -339,7 +339,7 @@ From this point, users can remotely control the power of the Super4C, monitor cu
 
 > Note: DC1/DC2 are external input power channels and cannot be controlled via switches. Do not confuse them.
 
-![webpage6](./imgs/super4c/webpage6.png)
+![webpage6](./imgs/super4c/webpage6.jpg)
 
 * The `Switch All OFF` button will turn off all eight switches simultaneously. <font color=red>Use with caution.</font>
 * The `Switch All ON` button will turn on all eight switches simultaneously.<font color=red>Use with caution.</font>
@@ -356,7 +356,7 @@ After connecting an SSD1306 screen:
 * Displays the current of the six current monitoring channels on the motherboard, in units of Amps (A).
 
 ![webpage8](./imgs/super4c/webpage8.jpg)
-![webpage9](./imgs/super4c/webpage9.jpg)
+![webpage9](./imgs/super4c/webpage9.png)
 
 If the W5500 function is not enabled, but an Ethernet cable is connected, the screen will display "W55" when connected and "OFF" when disconnected. 
 
