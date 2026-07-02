@@ -3,6 +3,7 @@ site_url: https://wiki.deskpi.com
 
 nav:
         - Home: index.md
+        - DeskPi 7.84-inch LCD Mount for 10-Inch 2U Rack Rackmate: DP-0059/DP-0059.md
         - DeskPi 9-Inch Touch Screen LCD Display for 10-Inch Rackmate: DP-0100/dp-0100.md
         - 10-Inch 2U Dual Cooling Fan Panel: DR-0006.md
         - 10-Inch 1U Quad Cooling Fan Panel: DR-0007.md
