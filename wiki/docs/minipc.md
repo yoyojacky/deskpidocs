@@ -133,130 +133,252 @@ Hardware write-protection must be `enabled` via software and then locked by pull
 /boot/firmware/config.txt file, so you don't need to modify any parameter in
 /boot/firmware/config.txt file.
 
-## How to update eeprom on CM4 by using mini cube?
-* This is the USB device boot code which supports the Raspberry Pi 1A, 3A+,
-	Computer Module, Computer Module 3,3+,4S and 4, Raspberry Pi Zero and Zero
-	2W. N.B. In regards to this document CM4 and CM4S have identical software support.
-The default behaviour when run with no arguments is to boot the Raspberry Pi with special firmware so that it emulates USB Mass Storage Device (MSD).
-The host OS will treat this as a normal USB mass storage device allowing the file system to be accessed. 
-If the storage has not been formatted yet (default for Compute Module) then the Raspberry Pi Imager App can be used to install a new operating system.
 
-Since RPIBOOT is a generic firmware loading interface, it is possible to load other versions of the firmware by passing the -d flag to specify the directory where the firmware should be loaded from. E.g. The firmware in the msd can be replaced with newer/older versions.
+## How to Update EEPROM Firmware on Raspberry Pi Compute Module 4 (CM4)
 
-From Raspberry Pi5 onwards the MSD firmware has been replaced with a Linux initramfs providing a mass-storage-gadget.
+### Overview
 
-For more information run `rpiboot -h`.
+Unlike earlier Compute Modules, the **CM4 uses an EEPROM bootloader** stored in on-board storage rather than the boot partition. This means it requires different update procedures compared to standard Raspberry Pi boards. 
 
-### Building
-* Linux / Cygwin / WSL
+---
 
-Clone this [repository](https://github.com/raspberrypi/usbboot) on your Pi or other Linux machine. 
-Make sure that the system date is set correctly, otherwise Git may produce an error.
+### Prerequisites
 
-This git repository uses symlinks. 
+| Item | Description |
+|------|-------------|
+| **Host PC** | Linux, macOS, or Windows PC with USB port |
+| **CM4 + IO Board** | CM4 mounted on an official CM4 IO Board or compatible carrier |
+| **USB Cable** | USB-C or micro-USB cable to connect IO Board to host |
+| **usbboot tools** | Raspberry Pi `usbboot` utility installed on the host |
 
-For Windows builds clone the repository under Cygwin
+#### Install usbboot (Host PC)
 
 ```bash
-sudo apt install git libusb-1.0-0-dev pkg-config build-essential
+# Clone the official usbboot repository
+git clone --depth=1 https://github.com/raspberrypi/usbboot
+cd usbboot
+
+# Build (Linux/macOS)
+make
+
+# Install dependencies if needed (Debian/Ubuntu)
+sudo apt install libusb-1.0-0-dev
+```
+
+---
+
+### Method 1: Flash Bootloader EEPROM via USB (Recommended)
+
+This method directly writes the bootloader EEPROM using `rpiboot` in recovery mode. It is the **most reliable method** for CM4.
+
+#### Step 1: Hardware Setup
+
+1. Mount the CM4 onto the IO Board.
+2. Ensure the **`EEPROM_nWP` pin is NOT pulled low** (write-protection must be disabled). 
+3. Connect the IO Board's USB slave port to your host PC.
+4. **Do NOT** insert an SD card or eMMC storage if you want to target the EEPROM directly.
+5. Power on the IO Board.
+
+#### Step 2: Flash the EEPROM
+
+Run the recovery command from the `usbboot` directory:
+
+```bash
+cd usbboot
+sudo ./rpiboot -d recovery
+```
+
+This writes `recovery/pieeprom.bin` to the CM4's bootloader EEPROM. 
+
+#### Step 3: Re-enable Write Protection (Optional)
+
+Once flashing completes successfully, you may pull `EEPROM_nWP` low again to prevent accidental modification. 
+
+---
+
+### Method 2: Self-Update from a Running OS
+
+If your CM4 is already booting from eMMC, USB, or network, you can enable **self-update mode**. However, this method carries a risk.
+
+> ⚠️ **Warning:** Self-update mode does **not** update the bootloader atomically. If a power failure occurs during the EEPROM update, you could corrupt the EEPROM. 
+
+#### Why CM4 Disables `rpi-eeprom-update` by Default
+
+On CM4, the `rpi-eeprom-update` service is **disabled by default** because the eMMC is not removable, and an invalid `recovery.bin` file could brick the system. 
+
+#### Enable Self-Update
+
+1. Add the following to your `config.txt` or bootloader configuration:
+
+```ini
+ENABLE_SELF_UPDATE=1
+```
+
+2. Reboot the CM4. The bootloader will check for updates from the boot media (eMMC, USB MSD, or network boot).
+
+---
+
+### Method 3: Update from Raspberry Pi OS (If Running)
+
+If you have Raspberry Pi OS running on the CM4 and want to check the current EEPROM version:
+
+```bash
+# Check current EEPROM status
+sudo rpi-eeprom-update
+
+# Update to latest stable (only works if self-update is enabled or on supported platforms)
+sudo rpi-eeprom-update -a
+```
+
+> **Note:** On some platforms (e.g., Home Assistant Yellow with CM4), firmware updates via `rpi-eeprom-update` may be blocked with `unsupported_boot_device`. In such cases, use the `rpiboot` method instead. 
+
+---
+
+### Important Best Practices
+
+Before deploying CM4 in production, Raspberry Pi recommends: 
+
+1. **Select a specific bootloader release** and verify every CM4 has that release.
+2. **Configure `BOOT_ORDER`** to define the boot device priority (eMMC → USB → NVMe → Network, etc.).
+3. **Enable hardware write-protection** (`EEPROM_nWP` pulled low) on production units to prevent unauthorized modification.
+
+#### Example Bootloader Configuration
+
+Create or edit `boot.conf` before flashing:
+
+```ini
+[all]
+BOOT_UART=0
+WAKE_ON_GPIO=1
+POWER_OFF_ON_HALT=0
+BOOT_ORDER=0xf2641   # eMMC → USB → NVMe → Network → Loop
+ENABLE_SELF_UPDATE=1
+```
+
+Then use `rpi-eeprom-config` to apply it:
+
+```bash
+sudo rpi-eeprom-config --out pieeprom-new.bin --config boot.conf pieeprom.bin
+```
+
+---
+
+### Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| `rpiboot` hangs or can't detect CM4 | Check USB cable, ensure CM4 is powered, try a different USB port |
+| EEPROM update succeeds but CM4 won't boot | Verify `BOOT_ORDER` is correct; newer silicon may require newer EEPROM (≥ 2026-01-09 for recent batches)  |
+| `unsupported_boot_device` error | Use `rpiboot -d recovery` method instead of OS-level update |
+| Write-protected error | Ensure `EEPROM_nWP` is not pulled low during flashing |
+
+---
+
+### References
+
+- [Raspberry Pi Compute Module Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html)
+- [rpi-eeprom GitHub Releases](https://github.com/raspberrypi/rpi-eeprom/releases)
+- [usbboot GitHub Repository](https://github.com/raspberrypi/usbboot)
+
+## Updating CM4 EEPROM Firmware with DeskPi Mini Cube
+
+### DIP Switch Configuration
+
+The DeskPi Mini Cube has a **4-position DIP switch** on the back that controls key CM4 signals. Here is the pinout: 
+
+| Switch | Function | Description |
+|--------|----------|-------------|
+| **1** | USB OTG Pull UP | Enables USB OTG pull-up resistor |
+| **2** | UNATTENDED | Unattended boot mode |
+| **3** | EEPROM_nWP | **EEPROM Write Protection** (low = protected) |
+| **4** | nRPIBOOT | **eMMC Boot Disable** (low = usbboot mode) |
+
+---
+
+### Step-by-Step: Flash EEPROM via USB (rpiboot)
+
+#### 1. Set DIP Switches for USB Boot Mode
+
+To put the CM4 into `rpiboot` mode (required for EEPROM flashing), configure the switches **before powering on**:
+
+| Switch | Position | Reason |
+|--------|----------|--------|
+| 1 | OFF | Not needed for EEPROM update |
+| 2 | OFF | Not needed |
+| **3** | **OFF** | **Disable write-protection** (`EEPROM_nWP` high → EEPROM writable) |
+| **4** | **ON** | **Enable nRPIBOOT** (pull GPIO 40 low → ROM enters usbboot mode) |
+
+> ⚠️ **Critical:** Switch 4 must be ON **before** power is applied, and switch 3 must be OFF to allow EEPROM writing. 
+
+#### 2. Connect Hardware
+
+1. Connect a **USB-C cable** from the Mini Cube's USB-C port to your host PC (Linux/macOS/Windows).
+2. Connect **USB-C power** to the Mini Cube's power input.
+3. Power on the Mini Cube.
+
+#### 3. Run `rpiboot` on Host PC
+
+On your host computer, clone and run the official `usbboot` tool:
+
+```bash
+# Linux / macOS
 git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 make
-sudo ./rpiboot
+
+# Flash the EEPROM with the recovery firmware
+sudo ./rpiboot -d recovery
 ```
 
-sudo isn't required if you have write permissions for the /dev/bus/usb device.
+This will write `recovery/pieeprom.bin` to the CM4's SPI EEPROM. 
 
-### macOS
-From a macOS machine, you can also run usbboot, just follow the same steps:
+#### 4. Custom EEPROM Configuration (Optional)
 
-* Clone the usbboot repository
-* Install libusb (brew install libusb)
-* Install pkg-config (brew install pkg-config)
-* (Optional) Export the PKG_CONFIG_PATH so that it includes the directory enclosing libusb-1.0.pc
-* Build using make
-* Run the binary
-
-```bash
-git clone --depth=1 https://github.com/raspberrypi/usbboot
-cd usbboot
-brew install libusb
-brew install pkg-config
-make
-sudo ./rpiboot
-```
-If the build is unable to find the header file libusb.h then most likely the PKG_CONFIG_PATH is not set properly. This should be set via export PKG_CONFIG_PATH="$(brew --prefix libusb)/lib/pkgconfig".
-
-If the build fails on an ARM-based Mac with a linker error such as ld: warning: ignoring file /usr/local/Cellar/libusb/1.0.26/lib/libusb-1.0.dylib, building for macOS-arm64 but attempting to link with file built for macOS-x86_64 then you may need to build and install libusb-1.0 yourself:
-```bash
-$ wget https://github.com/libusb/libusb/releases/download/v1.0.26/libusb-1.0.26.tar.bz2
-$ tar -xf libusb-1.0.26.tar.bz2
-$ cd libusb-1.0.26
-$ ./configure
-$ make
-$ make check
-$ sudo make install
-```
-Running make again should now succeed.
-
-### Running
-* Compute Module 3
-Fit the EMMC-DISABLE jumper on the Compute Module IO board before powering on the board or connecting the USB cable.
-
-* Compute Module 4
-On Compute Module 4 EMMC-DISABLE / nRPIBOOT (GPIO 40) must be fitted to switch the ROM to usbboot mode. Otherwise, the SPI EEPROM bootloader image will be loaded instead.
-
-Connect the USB-C cable (from the RPIBOOT host to the MiniCube)
-
-## Compute Module 4 Update the SPI EEPROM bootloader. 
-To update the SPI EEPROM bootloader on a Compute Module 4.
-
-* Modify the EEPROM configuration as desired
-* Optionally, replace pieeprom.original.bin with a custom version. The default
-  version here is the latest stable release recommended for use on Compute Module 4.
-
-N.B The `bootcode4.bin` file in this directory is actually the `recovery.bin`
-file used on Raspberry Pi 4 bootloader update cards.
+If you want to customize bootloader settings (e.g., `BOOT_ORDER`), edit `recovery/boot.conf` first, then regenerate the EEPROM image:
 
 ```bash
 cd recovery
+# Edit boot.conf as needed
 ./update-pieeprom.sh
-../rpiboot -d .
+cd ..
+sudo ./rpiboot -d recovery
 ```
 
-## Booting Linux
-The `RPIBOOT` protocol provides a virtual file system to the Raspberry Pi bootloader and GPU firmware. It's therefore possible to
-boot Linux. To do this, you will need to copy all of the files from a Raspberry Pi boot partition plus create your own
-initramfs.
-On Raspberry Pi 4 / CM4 the recommended approach is to use a `boot.img` which is a FAT disk image containing
-the minimal set of files required from the boot partition.
+---
 
-## Troubleshooting
-This section describes how to diagnose common `rpiboot` failures for Compute Modules. Whilst `rpiboot` is tested on every Compute Module during manufacture the system relies on multiple hardware and software elements. 
-The aim of this guide is to make it easier to identify which component is failing.
+### Step-by-Step: Normal Boot Mode (After Update)
 
-### Hardware
-* Inspect the Compute Module pins and connector for signs of damage and verify that the socket is free from debris.
-* Check that the Compute Module is fully inserted.
-* Check that `nRPIBOOT` / EMMC disable is pulled low BEFORE powering on the device.
-   * On BCM2711, if the USB cable is disconected and the nRPIBOOT jumper is fitted then the green LED should be OFF. If the LED is on then the ROM is detecting that the GPIO for nRPIBOOT is high.
-* Remove any hubs between the Compute Module and the host.
-* Disconnect all other peripherals from the IO board.
-* Verify that the red power LED switches on when the IO board is powered.
-* Use another computer to verify that the USB cable for `rpiboot` can reliably transfer data. For example, connect it to a Raspberry Pi keyboard with other devices connected to the keyboard USB hub.
+Once the EEPROM is flashed, revert the DIP switches to boot from eMMC or NVMe:
 
-#### Hardware - CM4
-* The CM4 EEPROM supports MMC, USB-MSD, USB 2.0, Network and NVMe boot by default. Try booting to Linux from an alternate boot mode (e.g. network) to verify the `nRPIBOOT` GPIO can be pulled low and that the USB 2.0 interface is working.
-* If `rpiboot` is running but the mass storage device does not appear then try running the `rpiboot -d mass-storage-gadget` because this uses Linux instead of a custom VPU firmware to implement the mass-storage gadget. This also provides a login console on UART and HDMI.
+| Switch | Position |
+|--------|----------|
+| 1 | OFF |
+| 2 | OFF |
+| **3** | **ON** | Enable write-protection (recommended for production) |
+| **4** | **OFF** | Disable nRPIBOOT (normal boot from eMMC/NVMe) |
 
-### Software
-The recommended host setup is Raspberry Pi with Raspberry Pi OS. Alternatively, most Linux X86 builds are also suitable. Windows adds some extra complexity for the USB drivers so we recommend debugging on Linux first.
+Then power-cycle the Mini Cube.
 
-* Update to the latest software release using `apt update rpiboot` or download and rebuild this repository from Github.
-* Run `rpiboot -v | tee log` to capture verbose log output. N.B. This can be very verbose on some systems.
+---
 
-#### bootcode.bin
-Be careful not to overwrite `bootcode.bin` or `bootcode4.bin` with the executable from a different subdirectory. The `rpiboot` process simply looks for a file called `bootcode.bin` (or `bootcode4.bin` on BCM2711). However, the file in `recovery`/`secure-boot-recovery` directories is actually the `recovery.bin` EEPROM flashing tool.
+### Troubleshooting
+
+| Issue | Check |
+|-------|-------|
+| `rpiboot` cannot detect device | Verify switch 4 is ON **before** power-on; try a different USB cable/port |
+| EEPROM write fails | Ensure switch 3 is OFF (write-protection disabled) |
+| Green LED stays ON after disconnecting USB | Indicates `nRPIBOOT` GPIO is still high — check switch 4 is ON |
+| Need to re-flash eMMC OS | Use `sudo ./rpiboot -d mass-storage-gadget` to mount eMMC as USB drive |
+
+---
+
+### Summary
+
+| Task | Switch 3 (EEPROM_nWP) | Switch 4 (nRPIBOOT) |
+|------|----------------------|---------------------|
+| **Flash EEPROM** | OFF (writable) | ON (usbboot mode) |
+| **Normal Boot** | ON (protected) | OFF (boot from storage) |
+
 
 ## How to enable fan automatically? 
 ** Assume that your operating system is Raspberry Pi OS (32bit/64bit) **
